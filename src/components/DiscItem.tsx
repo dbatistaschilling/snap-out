@@ -36,7 +36,7 @@ export const DiscItem = ({
             <ul className="portfolio-meta">
                 {
                     portfoliosMeta.map(({ url, text }: portfolioMeta) => (
-                        <li key={url}><a href={url}>{text}</a></li>
+                        <li key={`${url}-${text}`}><a href={url}>{text}</a></li>
                     ))
                 }
                 <li><a href={`#${audioId}`} className="listen-audio-popup-trigger">Listen</a></li>
