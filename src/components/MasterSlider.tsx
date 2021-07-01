@@ -8,11 +8,12 @@ export const MasterSlider = () => (
         Snap - Out
       </h2>
       <h2 className="ms-layer pi-caption-02" style={{left: '200px', top: '475px'}} data-type="text" data-effect="fade" data-duration={500} data-hide-effect="fade" data-delay={1400}>
-        ANNUNCIATE LE DATE DEL TOUR EUROPEO
+        GRUPPO DI ROCK INDIE ITALIANO
+        {/* ANNUNCIATE LE DATE DEL TOUR EUROPEO */}
       </h2>
-      <a href="/" className="ms-layer pi-button-02" style={{left: '490px', top: '585px'}} data-type="text" data-effect="top(20)" data-duration={500} data-hide-effect="fade" data-delay={1600}>
+      {/* <a href="/" className="ms-layer pi-button-02" style={{left: '490px', top: '585px'}} data-type="text" data-effect="top(20)" data-duration={500} data-hide-effect="fade" data-delay={1600}>
         Visualizza le date
-      </a>
+      </a> */}
     </div>
   </div>
 )

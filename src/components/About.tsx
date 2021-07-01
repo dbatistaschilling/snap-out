@@ -1,8 +1,13 @@
 import React from 'react'
 
+type paragraphs = {
+  key: string
+  paragraph: string
+}
+
 type props = {
   title: string
-  paragraphs: string[]
+  paragraphs: paragraphs[]
 }
 
 export const About = ({
@@ -17,8 +22,8 @@ export const About = ({
         <h2>{title}</h2>
     </div>
     {
-      paragraphs.map(paragraph => (
-        <p>{paragraph}</p>
+      paragraphs.map(({ key, paragraph }: paragraphs) => (
+        <p key={key}>{paragraph}</p>
       ))
     }
   </div>
