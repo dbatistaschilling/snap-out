@@ -1,7 +1,8 @@
 import React from 'react'
 import {
     MasterSlider,
-    Section,
+    About,
+    // Section,
     CustomBackground,
     Event,
     PageBtn,
@@ -17,20 +18,40 @@ const IndexPage = () => (
   <>
     <MasterSlider />
 
-    <PageContent>
+    {/* <PageContent>
         <Section url={"#"} image={"img/pics/img-01.jpg"} subject={"Tours"} />
         <Section url={"#"} image={"img/pics/img-02.jpg"} subject={"Music"} />
         <Section url={"#"} image={"img/pics/img-03.jpg"} subject={"Store"} />
     </PageContent>
 
-    <CustomBackground img={"bkg-img06"}/>
+    <CustomBackground img={"bkg-img06"}/> */}
+
+    <PageContent>
+        <About
+            title={'Riguardo Snap–Out'}
+            paragraphs={[
+                `
+                Il nome della Band dopo la pandemia, indica la rinascita dopo un momento oscuro. Sono un gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti.
+                `,
+                `
+                Nella loro carriera il gruppo ha vinto sia premi della critica che primi premi in concorsi nazionali su tematiche sociali suonando su palchi importanti come Palatlantico Live.  Nella loro giovane carriera hanno già consolidato più di 100 esibizioni in locali importanti della realtà laziale ed italiana suonando davanti a pubblici di migliaia di persone.
+                `,
+                `
+                Gli Snap – Out sono sensibili ai problemi sociali, all’integrazione, alla inclusione ed a tutte le cause delle persone fragili, uno dei problemi che per loro è prioritario è quello di decidere di vivere in un mondo migliore, non distrutto dall’inquinamento e dalle opere umane.
+                `,
+                `
+                Il gruppo è la testimonianza di una inclusione riuscita avendo tra i suoi membri un ragazzo Asperger. Tra i loro idoli,  Matthew Bellamy, Thom Yorke, Flea, John Frusciante, Greta Thunberg.
+                `
+            ]}
+        />
+    </PageContent>
 
     <PageContent
         pageContentClasses={"custom-background"}
         rowClasses={"mb-80"}
         pageBtn={<PageBtn url={"#"} text={"View all dates"} />}
     >
-        <SectionTitle title={"European tour dates"} />
+        <SectionTitle title={"Le date del Tour Europeo"} />
         <div className="col-md-12">
             <div className="pi-events events-style-02">
                 <Event
@@ -45,7 +66,7 @@ const IndexPage = () => (
                         { name: "Common Ticket", isSoldOut: false, ticketUrl: "" },
                     ]}
                 />
-                <Event
+                {/* <Event
                     subtitle={"Wednesday"}
                     date={"May 25"}
                     locationSubtitle={"London. UK"}
@@ -92,8 +113,8 @@ const IndexPage = () => (
                         { name: "Vip tickets", isSoldOut: true, ticketUrl: "#" },
                         { name: "Common", isSoldOut: false, ticketUrl: "#" },
                     ]}
-                />
-            </div> 
+                /> */}
+            </div>
         </div>
     </PageContent>
 
@@ -268,7 +289,7 @@ const IndexPage = () => (
     <CustomBackground img={"bkg-img10"}/>
 
     <PageContent pageContentClasses={"custom-background"}>
-        
+
         <SectionTitle title={"LATEST BUZZ"} />
 
         <div className="col-md-12">

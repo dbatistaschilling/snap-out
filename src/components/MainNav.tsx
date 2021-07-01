@@ -16,7 +16,7 @@ export const MainNav = ({
 
             <div id="logo">
                 <a href={logoUrl}>
-                    <img src={logoImgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
+                    <img src={logoImgPath} alt="gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."/>
                 </a>
             </div>
 
@@ -24,15 +24,15 @@ export const MainNav = ({
                 <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
                 </span>
-            </button>  
+            </button>
         </div>
-
+{/*
         <div id="search">
             <form>
                 <input className="search-submit" type="submit" />
                 <input id="m_search" name="s" type="text" placeholder="Type and hit enter..." />
             </form>
-        </div>
+        </div> */}
 
         <MainNavLinks items={[
             {

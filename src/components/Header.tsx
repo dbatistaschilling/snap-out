@@ -44,7 +44,7 @@ export const Header = () =>
                 <div className="row">
                     <div className="col-md-12">
 
-                        <MainNav logoUrl={"#"} logoImgPath={"img/svg/musician-logo-red-white.svg"} />
+                        <MainNav logoUrl={"/"} logoImgPath={"img/svg/musician-logo-red-white.svg"} />
 
                     </div>
                 </div>

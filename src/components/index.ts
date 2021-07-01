@@ -1,3 +1,4 @@
+export * from './About'
 export * from './HeadComponent'
 export * from './MasterSlider'
 export * from './Section'

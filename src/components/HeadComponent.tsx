@@ -2,7 +2,7 @@ import React from 'react'
 
 export const HeadComponent = () =>
 <>
-  <title>Musician - Home page music band</title>
+  <title>Snap-Out/ Rock indie italiano</title>
   <meta name="description" content="Musician theme for music industry - musicians, bands and music blogs" />
   <meta name="author" content="Pixel Industry" />
   <meta name="keywords" content="musician, theme, template, wordpress, badns, band, musicians, blog, music, music industry" />

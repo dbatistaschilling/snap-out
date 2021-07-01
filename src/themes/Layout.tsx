@@ -8,9 +8,9 @@ type Props = {
 
 const Layout = ({ children }: Props) => (
     <div>
-        {/* <div id="loader">
+        <div id="loader">
             <div id="loading-status"></div>
-        </div> */}
+        </div>
 
         <Header />
 
