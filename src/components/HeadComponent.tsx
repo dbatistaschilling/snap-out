@@ -8,7 +8,7 @@ export const HeadComponent = () =>
   <meta name="keywords" content="musician, theme, template, wordpress, badns, band, musicians, blog, music, music industry" />
   <meta charSet="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="img/favicon.png"/>
+  <link rel="shortcut icon" href="img/favicon-32x32.png"/>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600&amp;subset=latin,latin-ext" type="text/css" />
 
