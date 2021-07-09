@@ -14,19 +14,17 @@ export const About = ({
   title,
   paragraphs
 }: props) =>
-<>
-  <div className="col-md-2 hidden-xs hidden-sm">
-  </div>
-  <div className="col-md-8 centered">
-    <div className="custom-heading-01 triggerAnimation animated" data-animate="fadeInUp">
-        <h2>{title}</h2>
+  <div id="about">
+
+    <div className="col-md-8 centered">
+      <div className="custom-heading-01 triggerAnimation animated" data-animate="fadeInUp">
+          <h2>{title}</h2>
+      </div>
+      {
+        paragraphs.map(({ key, paragraph }: paragraphs) => (
+          <p key={key}>{paragraph}</p>
+        ))
+      }
     </div>
-    {
-      paragraphs.map(({ key, paragraph }: paragraphs) => (
-        <p key={key}>{paragraph}</p>
-      ))
-    }
+
   </div>
-  <div className="col-md-2 hidden-xs hidden-sm">
-  </div>
-</>

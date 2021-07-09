@@ -8,6 +8,10 @@ type Props = {
 
 const Layout = ({ children }: Props) => (
     <div>
+        <style global jsx>
+        {` html { scroll-behavior: smooth; }`}
+        </style>
+
         <div id="loader">
             <div id="loading-status"></div>
         </div>
@@ -17,32 +21,32 @@ const Layout = ({ children }: Props) => (
         {children}
 
         <Footer
-            imgUrl={"#"}
-            imgPath={"img/svg/musician-logo-red-white.svg"}
+            imgUrl={"/"}
+            imgPath={"img/svg/logo-snap-out.svg"}
             menuItems={[
                 {
                     url: "#",
-                    name: "News"
+                    name: "Home"
                 },
                 {
-                    url: "#",
-                    name: "Music"
+                    url: "#aboutSnapOut",
+                    name: "Sulla Band"
                 },
                 {
-                    url: "#",
-                    name: "Videos"
+                    url: "#members",
+                    name: "Membri"
                 },
                 {
-                    url: "#",
-                    name: "Events"
+                    url: "#events",
+                    name: "Eventi"
                 },
                 {
-                    url: "#",
-                    name: "About"
+                    url: "#media",
+                    name: "Media"
                 },
                 {
-                    url: "#",
-                    name: "Contact"
+                    url: "#contact",
+                    name: "Contatto"
                 },
             ]}
             newsLetterPopupMessage={"Sign up for our mailing list"}

@@ -20,11 +20,11 @@ export const MainNav = ({
                 </a>
             </div>
 
-            <button className="hamburger navbar-toggle hamburger--slider-r" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+            {/* <button className="hamburger navbar-toggle hamburger--slider-r" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
                 <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
                 </span>
-            </button>
+            </button> */}
         </div>
 {/*
         <div id="search">
@@ -37,135 +37,135 @@ export const MainNav = ({
         <MainNavLinks items={[
             {
                 itemClasses: "current-menu-item",
-                hasChildren: true,
+                hasChildren: false,
                 name: "Home",
                 children: [
-                    {
-                        url: "#",
-                        childName: "Music artist"
-                    },
-                    {
-                        url: "#",
-                        childName: "Music band"
-                    },
-                    {
-                        url: "#",
-                        childName: "Music blog"
-                    },
-                    {
-                        url: "#",
-                        childName: "Band store"
-                    },
+                    // {
+                    //     url: "#",
+                    //     childName: "Music artist"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "Music band"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "Music blog"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "Band store"
+                    // },
                 ],
-                noChildrenUrl: null
-            },
-            {
-                itemClasses: null,
-                hasChildren: true,
-                name: "About",
-                children: [
-                    {
-                        url: "#",
-                        childName: "About the band"
-                    },
-                    {
-                        url: "#",
-                        childName: "About artist band member"
-                    },
-                ],
-                noChildrenUrl: null
-            },
-            {
-                itemClasses: null,
-                hasChildren: true,
-                name: "Media",
-                children: [
-                    {
-                        url: "#",
-                        childName: "Music album view"
-                    },
-                    {
-                        url: "#",
-                        childName: "Music grid view"
-                    },
-                    {
-                        url: "#",
-                        childName: "Music album single creative"
-                    },
-                    {
-                        url: "#",
-                        childName: "Video grid"
-                    },
-                ],
-                noChildrenUrl: null
-            },
-            {
-                itemClasses: null,
-                hasChildren: true,
-                name: "Events",
-                children: [
-                    {
-                        url: "#",
-                        childName: "News creative dark"
-                    },
-                    {
-                        url: "#",
-                        childName: "Event single creative"
-                    },
-                ],
-                noChildrenUrl: null
-            },
-            {
-                itemClasses: null,
-                hasChildren: true,
-                name: "News",
-                children: [
-                    {
-                        url: "#",
-                        childName: "News creative dark"
-                    },
-                    {
-                        url: "#",
-                        childName: "News single creative dark"
-                    },
-                ],
-                noChildrenUrl: null
-            },
-            {
-                itemClasses: null,
-                hasChildren: true,
-                name: "Shop",
-                children: [
-                    {
-                        url: "#",
-                        childName: "Band store"
-                    },
-                    {
-                        url: "#",
-                        childName: "Shop products full"
-                    },
-                    {
-                        url: "#",
-                        childName: "Shop products sidebar left"
-                    },
-                    {
-                        url: "#",
-                        childName: "Shop products sidebar right"
-                    },
-                    {
-                        url: "#",
-                        childName: "Shop product single"
-                    },
-                ],
-                noChildrenUrl: null
+                noChildrenUrl: "#"
             },
             {
                 itemClasses: null,
                 hasChildren: false,
-                name: "Contact",
-                children: null,
-                noChildrenUrl: "#"
+                name: "Sulla Band",
+                children: [
+                    // {
+                    //     url: "#",
+                    //     childName: "About the band"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "About artist band member"
+                    // },
+                ],
+                noChildrenUrl: "#aboutSnapOut"
             },
+            {
+                itemClasses: null,
+                hasChildren: false,
+                name: "Membri",
+                children: [
+                    // {
+                    //     url: "#",
+                    //     childName: "About the band"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "About artist band member"
+                    // },
+                ],
+                noChildrenUrl: "#members"
+            },
+            {
+                itemClasses: null,
+                hasChildren: false,
+                name: "Eventi",
+                children: [
+                    // {
+                    //     url: "#",
+                    //     childName: "News creative dark"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "Event single creative"
+                    // },
+                ],
+                noChildrenUrl: "/#events"
+            },
+            {
+                itemClasses: null,
+                hasChildren: false,
+                name: "Media",
+                children: [
+                    // {
+                    //     url: "#",
+                    //     childName: "Music album view"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "Music grid view"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "Music album single creative"
+                    // },
+                    // {
+                    //     url: "#",
+                    //     childName: "Video grid"
+                    // },
+                ],
+                noChildrenUrl: "#media"
+            },
+            {
+                itemClasses: null,
+                hasChildren: false,
+                name: "Contatto",
+                children: null,
+                noChildrenUrl: "#contact"
+            },
+            // {
+            //     itemClasses: null,
+            //     hasChildren: true,
+            //     name: "Shop",
+            //     children: [
+            //         {
+            //             url: "#",
+            //             childName: "Band store"
+            //         },
+            //         {
+            //             url: "#",
+            //             childName: "Shop products full"
+            //         },
+            //         {
+            //             url: "#",
+            //             childName: "Shop products sidebar left"
+            //         },
+            //         {
+            //             url: "#",
+            //             childName: "Shop products sidebar right"
+            //         },
+            //         {
+            //             url: "#",
+            //             childName: "Shop product single"
+            //         },
+            //     ],
+            //     noChildrenUrl: null
+            // },
         ]} />
 
     </nav>

@@ -85,7 +85,7 @@ Tags: musician, music, band, music artist, music website template, music HTML te
                 6.22.12. WIDGET - CATEGORIES
                 6.22.13. WIDGET - PAGES
                 6.22.14. WIDGET - TAG CLOUD WIDGET
-                6.22.15. WIDGET - RECENT COMMENTS 
+                6.22.15. WIDGET - RECENT COMMENTS
                 6.22.16. WIDGET - RSS
                 6.22.17. WIDGET - SOCIAL LINKS
                 6.22.18. WIDGET - SHARRRE
@@ -177,7 +177,7 @@ button, input, select, textarea {
   width: 100% !important;
   max-width: 100% !important; }
 
-/*  
+/*
     2.1. TYPOGRAPHY
     ========================================================================= */
 /*  2.1.1. HEADINGS
@@ -300,8 +300,8 @@ pre {
   white-space: -o-pre-wrap;
   word-wrap: break-word; }
 
-/*  
-    LISTS   
+/*
+    LISTS
 */
 ul,
 ol {
@@ -361,8 +361,8 @@ ul.default-list {
 .dark-theme ul.default-list li {
   color: #fff; }
 
-/*  
-    FORM FIELDS   
+/*
+    FORM FIELDS
 */
 input, textarea, select {
   -webkit-border-radius: 0;
@@ -382,13 +382,13 @@ input, textarea {
     border-width: 1px;
     border-style: solid; }
 
-/*  
-    404 ICON   
+/*
+    404 ICON
 */
 .icon-404 .fa {
   font-size: 120px; }
 
-/*  
+/*
     6.1. ELEMENTS - AUDIO POPUP
     ========================================================================= */
 .audio-popup {
@@ -399,7 +399,7 @@ input, textarea {
   padding: 60px 0 0;
   text-align: center; }
 
-/*  
+/*
     6.2. ELEMENTS - BLOG
     ========================================================================= */
 .music-band .post-container .post-body h3 {
@@ -1075,7 +1075,7 @@ input, textarea {
 .dark-theme .pagination > ul > li > a {
   color: #fff; }
 
-/*  
+/*
     6.3. ELEMENTS - BUTTON
     ========================================================================= */
 .dark-theme .btn span {
@@ -1333,7 +1333,7 @@ input, textarea {
     .block-button.shop-category-link img {
       margin-bottom: 0; }
 
-/*  
+/*
     6.4. ELEMENTS - CALL TO ACTION
     ========================================================================= */
 .dark-theme .call-to-action .newsletter .email {
@@ -1395,7 +1395,7 @@ input, textarea {
     .call-to-action .newsletter .submit:hover {
       background-color: #444444; }
 
-/*  
+/*
     6.5. ELEMENTS - CONTACT FORM
     ========================================================================= */
 .wpcf7-form .contact-form-input-wrapper label {
@@ -1499,7 +1499,7 @@ input, textarea {
 .music-band .wpcf7-form label {
   margin-bottom: 20px; }
 
-/*  
+/*
     6.6. ELEMENTS - COUNTDOWN
     ========================================================================= */
 .counter {
@@ -1545,7 +1545,7 @@ input, textarea {
   font-family: "TrashHand", Arial, sans-serif;
   font-size: 50px; }
 
-/*  
+/*
     6.7. ELEMENTS - CUSTOM HEADINGS
     ========================================================================= */
 .music-band .custom-heading-01 h1, .music-band .custom-heading-01 h2, .music-band .custom-heading-01 h3, .music-band .custom-heading-01 h4, .music-band .custom-heading-01 h5, .music-band .custom-heading-01 h6,
@@ -1671,7 +1671,7 @@ input, textarea {
   padding-bottom: 15px;
   font-weight: 500; }
 
-/*  
+/*
     6.8. ELEMENTS - EVENTS
     ========================================================================= */
 .pi-events .events-row {
@@ -1813,7 +1813,7 @@ input, textarea {
       text-decoration: underline;
       font-weight: normal; }
 
-/*  
+/*
     6.9. ELEMENTS - GALLERY
     ========================================================================= */
 .gallery-items {
@@ -1917,7 +1917,7 @@ input, textarea {
 .col-md-3:nth-last-child(1) .video-item, .col-md-3:nth-last-child(2) .video-item, .col-md-3:nth-last-child(3) .video-item, .col-md-3:nth-last-child(4) .video-item, .col-lg-3:nth-last-child(1) .video-item, .col-lg-3:nth-last-child(2) .video-item, .col-lg-3:nth-last-child(3) .video-item, .col-lg-3:nth-last-child(4) .video-item, .col-sm-3:nth-last-child(1) .video-item, .col-sm-3:nth-last-child(2) .video-item, .col-sm-3:nth-last-child(3) .video-item, .col-sm-3:nth-last-child(4) .video-item {
   margin-bottom: 0; }
 
-/*  
+/*
     6.10. ELEMENTS - INSTAGRAM STREAM
     ========================================================================= */
 .instagram-stream {
@@ -1994,7 +1994,7 @@ input, textarea {
   overflow: hidden;
   margin-bottom: 0 !important; }
 
-/*  
+/*
     6.12. ELEMENTS - NEWSLETTER POPUP
     ========================================================================= */
 #newsletter-popup {
@@ -2056,7 +2056,7 @@ input, textarea {
 .music-band #newsletter-popup h2 {
   font-size: 30px; }
 
-/*  
+/*
     6.13. ELEMENTS - OWL CAROUSEL
     ========================================================================= */
 .owl-nav > .owl-prev,
@@ -2120,7 +2120,7 @@ input, textarea {
 .owl-stage-outer {
   width: 100%; }
 
-/*  
+/*
     6.14. ELEMENTS - PORTFOLIO
     ========================================================================= */
 .portfolio-items {
@@ -2280,7 +2280,7 @@ input, textarea {
 .dark-theme .filters.filters-style-02 > li.filter-button.is-checked a {
   color: #fff; }
 
-/*  
+/*
     6.15. ELEMENTS - REVIEWS
     ========================================================================= */
 .post-rating {
@@ -2463,7 +2463,7 @@ input, textarea {
   border: none;
   color: #fff; }
 
-/*  
+/*
     6.11. ELEMENTS - LATEST POSTS
     ========================================================================= */
 /*  6.11.1. LATEST POSTS STYLE 01
@@ -2558,7 +2558,7 @@ input, textarea {
   font-size: 30px;
   line-height: 46px; }
 
-/*  
+/*
     6.16. ELEMENTS - SCROLL UP
     ========================================================================= */
 .scroll-up {
@@ -3370,7 +3370,7 @@ input, textarea {
 .dark-theme.woocommerce form .form-row input.input-text, .dark-theme.woocommerce form .form-row select, .dark-theme.woocommerce form .form-row .select2-container {
   border: 1px solid #333; }
 
-/*  
+/*
     6.18. ELEMENTS - MASTER SLIDER
     ========================================================================= */
 #masterslider-artist,
@@ -3398,8 +3398,8 @@ input, textarea {
 .ms-view {
   background: #171719; }
 
-/* 
-    STYLING NAVIGATION ARROWS    
+/*
+    STYLING NAVIGATION ARROWS
 */
 .ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev {
   right: 0;
@@ -3455,7 +3455,7 @@ input, textarea {
 #masterslider-blog.ms-skin-default.with-inner-nav .ms-nav-next {
   margin-top: 0; }
 
-/*  
+/*
     MASTER SLIDER CAPTIONS, HEADINGS AND LINKS
 */
 .pi-caption-small {
@@ -3629,7 +3629,7 @@ input, textarea {
     font-size: 24px;
     color: #fff; }
 
-/*  
+/*
     6.19. ELEMENTS - SOCIAL LINKS
     ========================================================================= */
 .social-links.filled-circles {
@@ -3663,7 +3663,7 @@ input, textarea {
       .social-links.filled-circles li a:hover {
         background-color: #2d2a2a; }
 
-/*  
+/*
     6.20. ELEMENTS - TEAM MEMEBRS
     ========================================================================= */
 .team-member {
@@ -3681,7 +3681,7 @@ input, textarea {
     text-transform: uppercase;
     font-weight: 500; }
 
-/*  
+/*
     6.21. ELEMENTS - TESTIMONIAL
     ========================================================================= */
 .page-content.dark .testimonial > p {
@@ -3720,7 +3720,7 @@ input, textarea {
       display: inline-block;
       float: none; }
 
-/*  
+/*
     6.22. ELEMENTS - WIDGETS
     ========================================================================= */
 /*  6.22.1. BASIC WIDGET STYLING
@@ -4468,7 +4468,7 @@ a.download-link {
   .footer-widget-container .widget_tag_cloud a:hover, .footer-widget-container .widget_tag_cloud a:focus {
     color: #fff !important; }
 
-/* 6.22.15. WIDGETS - RECENT COMMENTS 
+/* 6.22.15. WIDGETS - RECENT COMMENTS
     ------------------------------------------------------------------------- */
 .widget_recent_comments ul li {
   list-style: none;
@@ -5094,7 +5094,7 @@ a.download-link {
   padding-right: 30px;
   padding-left: 30px; }
 
-/*  
+/*
     3.1. PAGE CONTENT
     ========================================================================= */
 .page-content {
@@ -5199,7 +5199,7 @@ a.download-link {
 .bkg-img11 {
   background-image: url("../img/pics/bkg-img-11.jpg"); }
 
-/*  
+/*
     3.2. HELPERS - PADDINGS AND MARGINS, CENTERING TEXT...
     ========================================================================= */
 *[class^="row"] *[class^="row"]:last-child {
@@ -5282,7 +5282,7 @@ a.download-link {
     padding-left: 0;
     padding-right: 0; }
 
-/*  
+/*
     3.3. PAGE TITLES
     ========================================================================= */
 .page-title {
@@ -5392,28 +5392,28 @@ a.download-link {
   background-image: url("../img/page-titles/music-band-page-title-02.jpg"); }
 
 .page-title-03 {
-  background-image: url("../img/page-titles/music-artist-page-title-01.jpg"); }
-
-.page-title-04 {
   background-image: url("../img/page-titles/music-band-page-title-03.jpg"); }
 
-.page-title-05 {
+.page-title-04 {
   background-image: url("../img/page-titles/music-band-page-title-04.jpg"); }
 
-.page-title-06 {
+.page-title-05 {
   background-image: url("../img/page-titles/music-band-page-title-05.jpg"); }
 
-.page-title-07 {
+.page-title-06 {
   background-image: url("../img/page-titles/music-band-page-title-06.jpg"); }
 
-.page-title-08 {
-  background-image: url("../img/page-titles/music-artist-page-title-02.jpg"); }
-
-.page-title-09 {
+.page-title-07 {
   background-image: url("../img/page-titles/music-band-page-title-07.jpg"); }
 
+.page-title-08 {
+  background-image: url("../img/page-titles/music-band-page-title-08.jpg"); }
+
+.page-title-09 {
+  background-image: url("../img/page-titles/music-band-page-title-09.jpg"); }
+
 .page-title-10 {
-  background-image: url("../img/page-titles/shop-page-title.jpg"); }
+  background-image: url("../img/page-titles/music-band-page-title-10.jpg"); }
 
 .music-band .page-title {
   position: relative;
@@ -5466,7 +5466,7 @@ a.download-link {
 /* =============================================================================
     4. HEADERS
     ========================================================================= */
-/*  
+/*
     4.1. GLOBAL HEADER STYLES - HEADER STYLE 02, HEADER STYLE 03
     ========================================================================= */
 .header-wrapper {
@@ -5660,7 +5660,7 @@ a.download-link {
       font-family: "FontAwesome";
       top: 3px; }
 
-/*  
+/*
     4.2. MAIN NAVIGATION
     ========================================================================= */
 .navbar-default {

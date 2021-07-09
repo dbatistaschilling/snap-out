@@ -21,9 +21,9 @@ export const Footer = ({
   imgUrl,
   imgPath,
   menuItems,
-  newsLetterPopupMessage,
-  newsLetterMessage,
-  emailPlaceholderText,
+//   newsLetterPopupMessage,
+//   newsLetterMessage,
+//   emailPlaceholderText,
   copyrightUrl,
   copyrightName
 }: props) =>
@@ -57,7 +57,7 @@ export const Footer = ({
                         </li>
                     </ul>
 
-                    <ul className="footer-widget-container">
+                    {/* <ul className="footer-widget-container">
 
                         <li className="widget widget_text">
                             <div className="textwidget">
@@ -78,7 +78,7 @@ export const Footer = ({
                             </div>
 
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </div>
