@@ -4,11 +4,13 @@ import { MainNavLinks } from "./MainNavLinks"
 type props = {
   logoUrl: string
   logoImgPath: string
+  menuActive: boolean
 }
 
 export const MainNav = ({
   logoUrl,
-  logoImgPath
+  logoImgPath,
+  menuActive
 }: props) =>
   <div className="main-nav">
     <nav className="navbar navbar-default nav-left pi-mega">
@@ -33,140 +35,142 @@ export const MainNav = ({
                 <input id="m_search" name="s" type="text" placeholder="Type and hit enter..." />
             </form>
         </div> */}
-
-        <MainNavLinks items={[
-            {
-                itemClasses: "current-menu-item",
-                hasChildren: false,
-                name: "Home",
-                children: [
+        {
+            menuActive && (
+                <MainNavLinks items={[
+                    {
+                        itemClasses: "current-menu-item",
+                        hasChildren: false,
+                        name: "Home",
+                        children: [
+                            // {
+                            //     url: "#",
+                            //     childName: "Music artist"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "Music band"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "Music blog"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "Band store"
+                            // },
+                        ],
+                        noChildrenUrl: "#"
+                    },
+                    {
+                        itemClasses: null,
+                        hasChildren: false,
+                        name: "Sulla Band",
+                        children: [
+                            // {
+                            //     url: "#",
+                            //     childName: "About the band"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "About artist band member"
+                            // },
+                        ],
+                        noChildrenUrl: "#aboutSnapOut"
+                    },
+                    {
+                        itemClasses: null,
+                        hasChildren: false,
+                        name: "Membri",
+                        children: [
+                            // {
+                            //     url: "#",
+                            //     childName: "About the band"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "About artist band member"
+                            // },
+                        ],
+                        noChildrenUrl: "#members"
+                    },
+                    {
+                        itemClasses: null,
+                        hasChildren: false,
+                        name: "Eventi",
+                        children: [
+                            // {
+                            //     url: "#",
+                            //     childName: "News creative dark"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "Event single creative"
+                            // },
+                        ],
+                        noChildrenUrl: "/#events"
+                    },
+                    {
+                        itemClasses: null,
+                        hasChildren: false,
+                        name: "Media",
+                        children: [
+                            // {
+                            //     url: "#",
+                            //     childName: "Music album view"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "Music grid view"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "Music album single creative"
+                            // },
+                            // {
+                            //     url: "#",
+                            //     childName: "Video grid"
+                            // },
+                        ],
+                        noChildrenUrl: "#media"
+                    },
+                    {
+                        itemClasses: null,
+                        hasChildren: false,
+                        name: "Contatto",
+                        children: null,
+                        noChildrenUrl: "#contact"
+                    },
                     // {
-                    //     url: "#",
-                    //     childName: "Music artist"
+                    //     itemClasses: null,
+                    //     hasChildren: true,
+                    //     name: "Shop",
+                    //     children: [
+                    //         {
+                    //             url: "#",
+                    //             childName: "Band store"
+                    //         },
+                    //         {
+                    //             url: "#",
+                    //             childName: "Shop products full"
+                    //         },
+                    //         {
+                    //             url: "#",
+                    //             childName: "Shop products sidebar left"
+                    //         },
+                    //         {
+                    //             url: "#",
+                    //             childName: "Shop products sidebar right"
+                    //         },
+                    //         {
+                    //             url: "#",
+                    //             childName: "Shop product single"
+                    //         },
+                    //     ],
+                    //     noChildrenUrl: null
                     // },
-                    // {
-                    //     url: "#",
-                    //     childName: "Music band"
-                    // },
-                    // {
-                    //     url: "#",
-                    //     childName: "Music blog"
-                    // },
-                    // {
-                    //     url: "#",
-                    //     childName: "Band store"
-                    // },
-                ],
-                noChildrenUrl: "#"
-            },
-            {
-                itemClasses: null,
-                hasChildren: false,
-                name: "Sulla Band",
-                children: [
-                    // {
-                    //     url: "#",
-                    //     childName: "About the band"
-                    // },
-                    // {
-                    //     url: "#",
-                    //     childName: "About artist band member"
-                    // },
-                ],
-                noChildrenUrl: "#aboutSnapOut"
-            },
-            {
-                itemClasses: null,
-                hasChildren: false,
-                name: "Membri",
-                children: [
-                    // {
-                    //     url: "#",
-                    //     childName: "About the band"
-                    // },
-                    // {
-                    //     url: "#",
-                    //     childName: "About artist band member"
-                    // },
-                ],
-                noChildrenUrl: "#members"
-            },
-            {
-                itemClasses: null,
-                hasChildren: false,
-                name: "Eventi",
-                children: [
-                    // {
-                    //     url: "#",
-                    //     childName: "News creative dark"
-                    // },
-                    // {
-                    //     url: "#",
-                    //     childName: "Event single creative"
-                    // },
-                ],
-                noChildrenUrl: "/#events"
-            },
-            {
-                itemClasses: null,
-                hasChildren: false,
-                name: "Media",
-                children: [
-                    // {
-                    //     url: "#",
-                    //     childName: "Music album view"
-                    // },
-                    // {
-                    //     url: "#",
-                    //     childName: "Music grid view"
-                    // },
-                    // {
-                    //     url: "#",
-                    //     childName: "Music album single creative"
-                    // },
-                    // {
-                    //     url: "#",
-                    //     childName: "Video grid"
-                    // },
-                ],
-                noChildrenUrl: "#media"
-            },
-            {
-                itemClasses: null,
-                hasChildren: false,
-                name: "Contatto",
-                children: null,
-                noChildrenUrl: "#contact"
-            },
-            // {
-            //     itemClasses: null,
-            //     hasChildren: true,
-            //     name: "Shop",
-            //     children: [
-            //         {
-            //             url: "#",
-            //             childName: "Band store"
-            //         },
-            //         {
-            //             url: "#",
-            //             childName: "Shop products full"
-            //         },
-            //         {
-            //             url: "#",
-            //             childName: "Shop products sidebar left"
-            //         },
-            //         {
-            //             url: "#",
-            //             childName: "Shop products sidebar right"
-            //         },
-            //         {
-            //             url: "#",
-            //             childName: "Shop product single"
-            //         },
-            //     ],
-            //     noChildrenUrl: null
-            // },
-        ]} />
-
+                ]} />
+            )
+        }
     </nav>
   </div>

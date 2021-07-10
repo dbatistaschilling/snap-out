@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  CustomBackground,
+  // CustomBackground,
   PageContent,
   PageTitle
 } from '../components'
@@ -26,7 +26,7 @@ const ElisaMarsella = () =>
     <div className="col-md-2 hidden-xs hidden-sm">
     </div>
   </PageContent>
-  <CustomBackground img={"bkg-img11"} />
+  {/* <CustomBackground img={"bkg-img11"} /> */}
   <PageContent>
     <div className="col-md-12 centered">
       <div className="custom-heading-01 triggerAnimation animated" data-animate="fadeInUp">

@@ -17,7 +17,7 @@ export const PageTitle = ({ title, subtitle, style, pageTitle }: props) =>
                     title && <h1>{title}</h1>
                   }
                   {
-                    subtitle && <span>{subtitle}</span>
+                    subtitle && <span style={{ color: 'white' }}>{subtitle}</span>
                   }
               </div>
           </div>

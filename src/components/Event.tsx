@@ -12,7 +12,7 @@ type props = {
   locationSubtitle: string
   locationUrl: string
   locationText: string
-  tickets: ticket[]
+  tickets?: ticket[]
 }
 
 export const Event = ({
@@ -24,31 +24,48 @@ export const Event = ({
   tickets
 }: props) =>
   <div className="events-row">
-    <div className="events-date-container events-cell">
-        <span className="event-subtitle">{subtitle}</span>
-        <span className="event-date">{date}</span>
-    </div>
-    <div className="events-location-container events-cell">
-        <span className="event-subtitle">{locationSubtitle}</span>
-        <span className="event-location"><a href={locationUrl}>{locationText}</a></span>
-    </div>
     {
-      tickets.map(({name,  isSoldOut, ticketUrl}: ticket) => (
-        <div className="events-buttons events-cell" key={name}>
+      tickets ? (
+        <>
+          <div className="events-date-container events-cell">
+              <span className="event-subtitle">{subtitle}</span>
+              <span className="event-date">{date}</span>
+          </div>
+          <div className="events-location-container events-cell">
+              <span className="event-subtitle">{locationSubtitle}</span>
+              <span className="event-location"><a href={locationUrl}>{locationText}</a></span>
+          </div>
           {
-            !isSoldOut ? (
-              <a href={ticketUrl} className="btn">
-                  <span className="event-subtitle">{name}</span>
-                  <span>Get tickets</span>
-              </a>
-            ) : (
-              <div className="events-sold-out">
-                  <span className="event-subtitle">{name}</span>
-                  <span>Sold out</span>
+            tickets.map(({name,  isSoldOut, ticketUrl}: ticket) => (
+              <div className="events-buttons events-cell" key={name}>
+                {
+                  !isSoldOut ? (
+                    <a href={ticketUrl} className="btn">
+                        <span className="event-subtitle">{name}</span>
+                        <span>Get tickets</span>
+                    </a>
+                  ) : (
+                    <div className="events-sold-out">
+                        <span className="event-subtitle">{name}</span>
+                        <span>Sold out</span>
+                    </div>
+                  )
+                }
               </div>
-            )
+            ))
           }
+        </>
+      ) : (
+        <div style={{ marginLeft: '30%' }}>
+          <div className="events-date-container events-cell">
+            <span className="event-subtitle">{subtitle}</span>
+            <span className="event-date">{date}</span>
+            </div>
+          <div className="events-location-container events-cell">
+              <span className="event-subtitle">{locationSubtitle}</span>
+              <span className="event-location"><a href={locationUrl}>{locationText}</a></span>
+          </div>
         </div>
-      ))
+      )
     }
   </div>

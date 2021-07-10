@@ -9,10 +9,11 @@ type menuItem = {
 type props = {
   imgUrl: string
   imgPath: string
+  menuActive: boolean
   menuItems: menuItem[]
-  newsLetterPopupMessage: string
-  newsLetterMessage: string
-  emailPlaceholderText: string
+  newsLetterPopupMessage?: string
+  newsLetterMessage?: string
+  emailPlaceholderText?: string
   copyrightUrl: string
   copyrightName: string
 }
@@ -20,6 +21,7 @@ type props = {
 export const Footer = ({
   imgUrl,
   imgPath,
+  menuActive,
   menuItems,
 //   newsLetterPopupMessage,
 //   newsLetterMessage,
@@ -44,18 +46,21 @@ export const Footer = ({
                             </div>
                         </li>
                     </ul>
-
-                    <ul className="footer-widget-container">
-                        <li className="widget widget_nav_menu">
-                            <ul className="menu">
-                              {
-                                menuItems.map(({ url, name }: menuItem) => (
-                                  <li key={name} className="menu-item"><a href={url}>{name}</a></li>
-                                ))
-                              }
+                    {
+                        menuActive && (
+                            <ul className="footer-widget-container">
+                                <li className="widget widget_nav_menu">
+                                    <ul className="menu">
+                                    {
+                                        menuItems.map(({ url, name }: menuItem) => (
+                                        <li key={name} className="menu-item"><a href={url}>{name}</a></li>
+                                        ))
+                                    }
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
+                        )
+                    }
 
                     {/* <ul className="footer-widget-container">
 

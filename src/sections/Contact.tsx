@@ -12,22 +12,13 @@ export const ContactSection = () =>
     </div>
     <div className="col-md-2 hidden-xs">
     </div>
-    <div className="col-md-4 col-sm-6">
-        <h3>Booking EU</h3>
+    <div className="col-md-12 col-sm-12 centered">
+        <h3>Scrivi agli snap</h3>
         <ul className="default-list">
-            <li>bookingeu@musician.com</li>
+            <li>snap@snapout.it</li>
             <li><br /></li>
-            <li>Booking Manager: Jerry Howard</li>
-            <li>Phone: +00 41 258 7895</li>
-        </ul>
-    </div>
-    <div className="col-md-4 col-sm-6">
-        <h3>Booking USA</h3>
-        <ul className="default-list">
-            <li>bookingusa@musician.com</li>
-            <li><br /></li>
-            <li>Booking Manager: Jesse Carroll</li>
-            <li>Phone: +00 41 258 7895</li>
+            <li>Manager di eventi: Ruggero Ruggeri</li>
+            <li>telefono: +39 348 710 1958</li>
         </ul>
     </div>
     <div className="col-md-2 hidden-xs">

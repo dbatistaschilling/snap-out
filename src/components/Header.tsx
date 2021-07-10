@@ -3,7 +3,11 @@ import React from 'react'
 import { MainNav } from "./MainNav"
 import { SocialLinks } from "./SocialLinks"
 
-export const Header = () =>
+type props = {
+    menuActive: boolean
+}
+
+export const Header = ({ menuActive }: props) =>
   <div className="header-wrapper header-transparent header-style-02 clearfix">
     <header id="header">
         <div className="container-fluid">
@@ -43,7 +47,11 @@ export const Header = () =>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-        <MainNav logoUrl={"/"} logoImgPath={"img/svg/logo-snap-out.svg"} />
+                        <MainNav
+                            logoUrl={"/"}
+                            logoImgPath={"img/svg/logo-snap-out.svg"}
+                            menuActive={menuActive}
+                        />
                     </div>
                 </div>
             </div>

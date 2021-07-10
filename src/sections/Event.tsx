@@ -19,16 +19,16 @@ export const EventSection = () =>
     <div className="col-md-12">
         <div className="pi-events events-style-02">
             <Event
-                subtitle={"Monday"}
-                date={"May 23"}
-                locationSubtitle={"Berlin, Germany"}
+                subtitle={"Giovedì"}
+                date={"6 agosto"}
+                locationSubtitle={"Porto Cesareo"}
                 locationUrl={"#"}
-                locationText={"Arena Berlin"}
-                tickets={[
-                    { name: "Fan club", isSoldOut: true, ticketUrl: "" },
-                    { name: "Vip tickets", isSoldOut: true, ticketUrl: "" },
-                    { name: "Common Ticket", isSoldOut: false, ticketUrl: "" },
-                ]}
+                locationText={"Myconos"}
+                // tickets={[
+                //     { name: "Fan club", isSoldOut: true, ticketUrl: "" },
+                //     { name: "Vip tickets", isSoldOut: true, ticketUrl: "" },
+                //     { name: "Common Ticket", isSoldOut: false, ticketUrl: "" },
+                // ]}
             />
             {/* <Event
                 subtitle={"Wednesday"}
