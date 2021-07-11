@@ -1,0 +1,77 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-feb8a7604fa7fce626b2.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/GsjGnaQIFusf14-oC3Otc/_buildManifest.js",
+    "static/GsjGnaQIFusf14-oC3Otc/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.4b81eedf2fcdb09bf521.js",
+      "static/chunks/commons.23614d068490d3f888e8.js",
+      "static/chunks/main-e6182599a30d08ee19c0.js",
+      "static/chunks/82308df33a8fcc82998b0b4e25c980a8b6543ac1.86f91b53a7166d683e75.js",
+      "static/chunks/pages/index-ec610235ec2bb07f7638.js"
+    ],
+    "/ElisaMarsella": [
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.4b81eedf2fcdb09bf521.js",
+      "static/chunks/commons.23614d068490d3f888e8.js",
+      "static/chunks/main-e6182599a30d08ee19c0.js",
+      "static/chunks/82308df33a8fcc82998b0b4e25c980a8b6543ac1.86f91b53a7166d683e75.js",
+      "static/chunks/pages/ElisaMarsella-18e398446804b44291f5.js"
+    ],
+    "/FlaviaMazzetti": [
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.4b81eedf2fcdb09bf521.js",
+      "static/chunks/commons.23614d068490d3f888e8.js",
+      "static/chunks/main-e6182599a30d08ee19c0.js",
+      "static/chunks/82308df33a8fcc82998b0b4e25c980a8b6543ac1.86f91b53a7166d683e75.js",
+      "static/chunks/pages/FlaviaMazzetti-6a06dd63499f3104cd87.js"
+    ],
+    "/LacaRuggieri": [
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.4b81eedf2fcdb09bf521.js",
+      "static/chunks/commons.23614d068490d3f888e8.js",
+      "static/chunks/main-e6182599a30d08ee19c0.js",
+      "static/chunks/82308df33a8fcc82998b0b4e25c980a8b6543ac1.86f91b53a7166d683e75.js",
+      "static/chunks/pages/LacaRuggieri-4347132660160c15f8ef.js"
+    ],
+    "/LucaParente": [
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.4b81eedf2fcdb09bf521.js",
+      "static/chunks/commons.23614d068490d3f888e8.js",
+      "static/chunks/main-e6182599a30d08ee19c0.js",
+      "static/chunks/82308df33a8fcc82998b0b4e25c980a8b6543ac1.86f91b53a7166d683e75.js",
+      "static/chunks/pages/LucaParente-03929169c0d9c0cbe50b.js"
+    ],
+    "/RaulRuggieri": [
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.4b81eedf2fcdb09bf521.js",
+      "static/chunks/commons.23614d068490d3f888e8.js",
+      "static/chunks/main-e6182599a30d08ee19c0.js",
+      "static/chunks/82308df33a8fcc82998b0b4e25c980a8b6543ac1.86f91b53a7166d683e75.js",
+      "static/chunks/pages/RaulRuggieri-9bd0dc381a30a7ca43e8.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.4b81eedf2fcdb09bf521.js",
+      "static/chunks/commons.23614d068490d3f888e8.js",
+      "static/chunks/main-e6182599a30d08ee19c0.js",
+      "static/chunks/82308df33a8fcc82998b0b4e25c980a8b6543ac1.86f91b53a7166d683e75.js",
+      "static/chunks/pages/_app-6d81dd76d52067ba931e.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-50bee04d1dc61f8adf5b.js",
+      "static/chunks/framework.4b81eedf2fcdb09bf521.js",
+      "static/chunks/commons.23614d068490d3f888e8.js",
+      "static/chunks/main-e6182599a30d08ee19c0.js",
+      "static/chunks/pages/_error-edc7b3de7ee8e91872a7.js"
+    ]
+  },
+  "ampFirstPages": []
+}
