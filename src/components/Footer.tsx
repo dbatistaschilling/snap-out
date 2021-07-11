@@ -40,7 +40,7 @@ export const Footer = ({
 
                         <li className="widget widget_text">
                             <div className="textwidget">
-                                <a href={imgUrl}>
+                                <a href={`${process.env.BACKEND_URL}${imgUrl}`}>
                                     <img src={imgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
                                 </a>
                             </div>

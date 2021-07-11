@@ -17,7 +17,7 @@ export const MainNav = ({
         <div className="navbar-header">
 
             <div id="logo">
-                <a href={logoUrl}>
+                <a href={`${process.env.BACKEND_URL}${logoUrl}`}>
                     <img src={logoImgPath} alt="gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."/>
                 </a>
             </div>
