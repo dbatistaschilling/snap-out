@@ -1,9 +1,9 @@
 "use strict";
 /*
  * PIXEL INDUSTRY INCLUDE FILE
- * 
+ *
  * Includes functions necessary for proper theme work and some helper functions.
- * 
+ *
  */
 
 
@@ -46,7 +46,7 @@ function convertToSVG() {
 
 /**
  * Master slider blog - placing navigation buttons inside of pi-container
- * 
+ *
  * @returns void
  */
 function blogSliderNavPosition() {
@@ -171,7 +171,7 @@ jQuery(window).on("load resize", function () {
     if (jQuery(window).height() > jQuery('body').height()) {
         jQuery('#footer-wrapper').addClass('static');
     }
-    
+
     /**
      * Content tabs
      */
@@ -528,7 +528,7 @@ var VolcannoInclude = {
     },
     /**
      * Function for old browsers placeholder fix
-     * 
+     *
      * @returns void
      */
     placeholderFix: function () {
@@ -536,11 +536,11 @@ var VolcannoInclude = {
     },
     /**
      * Instagram stream
-     * 
+     *
      * @returns void
      */
     instagramStream: function () {
-        // INSTAGRAM STREAM START 
+        // INSTAGRAM STREAM START
         jQuery('.instagram-stream').instagramstream({
             limit: 8, // number of images to fetch
             username: 'YOUR-USERNAME', // your username
@@ -976,7 +976,7 @@ var VolcannoInclude = {
 
         // function to check is user is on touch device
         function is_touch_device() {
-            return 'ontouchstart' in window // works on most browsers 
+            return 'ontouchstart' in window // works on most browsers
                     || 'onmsgesturechange' in window; // works on ie10
         }
     }
@@ -985,17 +985,17 @@ var VolcannoInclude = {
 jQuery(document).ready(function ($) {
     'use strict';
 
-    // MASTER SLIDER START 
+    // MASTER SLIDER START
     VolcannoInclude.masterSliderInit("masterslider-band");
 
     // INCLUDE LATEST PORTFOLIO CAROUSEL
-    VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
+    // VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
 
     // INCLUDE LATEST POSTS CAROUSEL
-    VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
+    // VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
 
     // FOOTER NEWSLETTER
-    VolcannoInclude.magnificPopupInit('newsletter-popup');
+    // VolcannoInclude.magnificPopupInit('newsletter-popup');
 
     // AUDIO POPUP
     VolcannoInclude.magnificPopupInit('audio-popup');

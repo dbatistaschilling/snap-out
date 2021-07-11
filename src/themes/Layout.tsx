@@ -32,13 +32,13 @@ const Layout = ({ children }: Props) => {
             {` html { scroll-behavior: smooth; }`}
             </style>
 
-            {
+            {/* {
                 loader && (
                     <div id="loader">
                         <div id="loading-status"></div>
                     </div>
                 )
-            }
+            } */}
 
             <Header menuActive={menuActive} />
 
