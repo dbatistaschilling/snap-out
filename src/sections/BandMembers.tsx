@@ -18,35 +18,35 @@ export const BandMembersSection = () =>
         <TeamMember
         img={"img/pics/member1.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-        url={"/FlaviaMazzetti"}
+        url={"/flavia-mazzetti"}
         name={"Flavia Mazzetti"}
         role={"Voce, Chitarra"}
         />
         <TeamMember
         img={"img/pics/member3.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-        url={"/RaulRuggieri"}
+        url={"/raul-ruggieri"}
         name={"Raul Ruggieri"}
         role={"Basso, tastiere, 2°voce"}
         />
         <TeamMember
         img={"img/pics/member4.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-        url={"/LacaRuggieri"}
+        url={"/laca-ruggieri"}
         name={"Laca Ruggieri"}
         role={"Batteria, violino, voce distorta"}
         />
         <TeamMember
         img={"img/pics/member5.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-        url={"/LucaParente"}
+        url={"/luca-parente"}
         name={"Luca Parente"}
         role={"Chitarra, cori"}
         />
         <TeamMember
         img={"img/pics/member2.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-        url={"/ElisaMarsella"}
+        url={"/elisa-marsella"}
         name={"Elisa Marsella"}
         role={"Chitarra, tastiera, cori"}
         />

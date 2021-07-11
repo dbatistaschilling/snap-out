@@ -1,6 +1,6 @@
 import React, { ReactNode, useEffect, useState } from 'react'
 import { Header, Footer } from "../components"
-import { useRouter } from 'next/router'
+import  { useRouter } from 'next/router'
 
 type Props = {
   children?: ReactNode
@@ -11,9 +11,20 @@ const Layout = ({ children }: Props) => {
     const router = useRouter()
     const mainPage = ['/#', '/', '/#aboutSnapOut', '/#members', '/#events', '/#media', '/#contact']
     const [menuActive, setMenuActive] = useState(true)
+    const [reload, setReload] = useState(true)
+
     useEffect(() => {
-        (!mainPage.some(section => router.asPath === section)) ?
-            setMenuActive(false) : setMenuActive(true)
+        if (!mainPage.some(section => router.asPath === section)) {
+            setMenuActive(false)
+            setReload(false)
+        } else {
+            setMenuActive(true)
+            if (!reload){
+                router.push('/')
+                location.reload()
+                setReload(true)
+            }
+        }
     }, [router.asPath])
 
     return (
