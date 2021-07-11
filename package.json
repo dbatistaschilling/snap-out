@@ -1,13 +1,18 @@
 {
-  "name": "with-typescript",
+  "name": "snap-out",
+  "homepage": "https://dbatistaschilling.github.io/snap-out",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "export": "next export",
+    "predeploy": "yarn export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "jquery": "^3.6.0",
     "next": "latest",
     "react": "^17.0.1",

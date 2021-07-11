@@ -11,10 +11,20 @@ const Layout = ({ children }: Props) => {
     const router = useRouter()
     const mainPage = ['/#', '/', '/#aboutSnapOut', '/#members', '/#events', '/#media', '/#contact']
     const [menuActive, setMenuActive] = useState(true)
+    const [loader, setLoader] = useState(true)
+
     useEffect(() => {
+        if (router.asPath === '/') {
+            setLoader(true)
+        }
         (!mainPage.some(section => router.asPath === section)) ?
             setMenuActive(false) : setMenuActive(true)
+        setTimeout(cancelLoader, 3000)
     }, [router.asPath])
+
+    const cancelLoader = () => {
+        setLoader(false)
+    }
 
     return (
         <div>
@@ -22,9 +32,13 @@ const Layout = ({ children }: Props) => {
             {` html { scroll-behavior: smooth; }`}
             </style>
 
-            <div id="loader">
-                <div id="loading-status"></div>
-            </div>
+            {
+                loader && (
+                    <div id="loader">
+                        <div id="loading-status"></div>
+                    </div>
+                )
+            }
 
             <Header menuActive={menuActive} />
 
