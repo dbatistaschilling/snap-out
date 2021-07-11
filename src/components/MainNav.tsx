@@ -1,6 +1,5 @@
-import React from 'react'
-import { MainNavLinks } from "./MainNavLinks"
-import BasePathLink from '../BasePathLink';
+import React from 'react';
+import { MainNavLinks } from "./MainNavLinks";
 
 type props = {
   logoUrl: string
@@ -18,11 +17,9 @@ export const MainNav = ({
         <div className="navbar-header">
 
             <div id="logo">
-                <BasePathLink href={logoUrl}>
-                    <a>
-                        <img src={logoImgPath} alt="gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."/>
-                    </a>
-                </BasePathLink>
+                <a href={logoUrl}>
+                    <img src={logoImgPath} alt="gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."/>
+                </a>
             </div>
 
             {/* <button className="hamburger navbar-toggle hamburger--slider-r" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">

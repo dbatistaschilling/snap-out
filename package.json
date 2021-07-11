@@ -1,15 +1,14 @@
 {
   "name": "snap-out",
   "homepage": "https://dbatistaschilling.github.io/snap-out",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
     "start": "next start",
     "type-check": "tsc",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d out",
-    "publish": "subpath-as-branch --path dist --branch gh-pages"
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
