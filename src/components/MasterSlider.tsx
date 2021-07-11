@@ -4,7 +4,7 @@ export const MasterSlider = () => (
   <div id="home">
     <div id="masterslider-band" className="master-slider ms-skin-default slider-border">
       <div className="ms-slide">
-        <img src="masterslider/blank.gif" data-src="img/slider/musician-music-band-slide-01.jpg" alt="Musician HTML template for music industry - musicians, bands and music blogs" />
+        <img src="masterslider/blank.gif" data-src="assets/img/slider/musician-music-band-slide-01.jpg" alt="Musician HTML template for music industry - musicians, bands and music blogs" />
         <h2 className="ms-layer pi-caption" style={{left: '350px', top: '350px'}} data-type="text" data-effect="bottom(20)" data-duration={500} data-hide-effect="fade" data-delay={1700}>
           Snap - Out
         </h2>
@@ -17,7 +17,7 @@ export const MasterSlider = () => (
         </a> */}
       </div>
       <div className="ms-slide">
-        <img src="masterslider/blank.gif" data-src="img/slider/musician-music-band-slide-02.png" alt="Musician HTML template for music industry - musicians, bands and music blogs" />
+        <img src="masterslider/blank.gif" data-src="assets/img/slider/musician-music-band-slide-02.png" alt="Musician HTML template for music industry - musicians, bands and music blogs" />
         <h2 className="ms-layer pi-caption" style={{left: '350px', top: '350px'}} data-type="text" data-effect="bottom(20)" data-duration={500} data-hide-effect="fade" data-delay={1700}>
           Snap - Out
         </h2>
@@ -30,7 +30,7 @@ export const MasterSlider = () => (
         </a> */}
       </div>
       <div className="ms-slide">
-        <img src="masterslider/blank.gif" data-src="img/slider/musician-music-band-slide-03.png" alt="Musician HTML template for music industry - musicians, bands and music blogs" />
+        <img src="masterslider/blank.gif" data-src="assets/img/slider/musician-music-band-slide-03.png" alt="Musician HTML template for music industry - musicians, bands and music blogs" />
         <h2 className="ms-layer pi-caption" style={{left: '350px', top: '350px'}} data-type="text" data-effect="bottom(20)" data-duration={500} data-hide-effect="fade" data-delay={1700}>
           Snap - Out
         </h2>

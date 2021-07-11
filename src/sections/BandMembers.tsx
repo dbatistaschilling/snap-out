@@ -16,35 +16,35 @@ export const BandMembersSection = () =>
             </div>
         </div>
         <TeamMember
-        img={"img/pics/member1.png"}
+        img={"assets/img/pics/member1.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
         url={"/flavia-mazzetti"}
         name={"Flavia Mazzetti"}
         role={"Voce, Chitarra"}
         />
         <TeamMember
-        img={"img/pics/member3.png"}
+        img={"assets/img/pics/member3.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
         url={"/raul-ruggieri"}
         name={"Raul Ruggieri"}
         role={"Basso, tastiere, 2°voce"}
         />
         <TeamMember
-        img={"img/pics/member4.png"}
+        img={"assets/img/pics/member4.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
         url={"/laca-ruggieri"}
         name={"Laca Ruggieri"}
         role={"Batteria, violino, voce distorta"}
         />
         <TeamMember
-        img={"img/pics/member5.png"}
+        img={"assets/img/pics/member5.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
         url={"/luca-parente"}
         name={"Luca Parente"}
         role={"Chitarra, cori"}
         />
         <TeamMember
-        img={"img/pics/member2.png"}
+        img={"assets/img/pics/member2.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
         url={"/elisa-marsella"}
         name={"Elisa Marsella"}

@@ -43,7 +43,7 @@ const Layout = ({ children }: Props) => {
 
             <Footer
                 imgUrl={"/"}
-                imgPath={"img/svg/logo-snap-out.svg"}
+                imgPath={"assets/img/svg/logo-snap-out.svg"}
                 menuActive={menuActive}
                 menuItems={[
                     {

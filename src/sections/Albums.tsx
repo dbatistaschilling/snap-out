@@ -12,7 +12,7 @@ export const AlbumsSection = () =>
           <div className="latest-portfolio-carousel owl-carousel">
               <DiscItem
                   albumImgUrl={"#"}
-                  albumImgPath={"img/pics/music-album-01.jpg"}
+                  albumImgPath={"assets/img/pics/music-album-01.jpg"}
                   titleUrl={"#"}
                   title={"live from london"}
                   portfoliosMeta={[
@@ -24,7 +24,7 @@ export const AlbumsSection = () =>
               />
               <DiscItem
                   albumImgUrl={"#"}
-                  albumImgPath={"img/pics/music-album-02.jpg"}
+                  albumImgPath={"assets/img/pics/music-album-02.jpg"}
                   titleUrl={"#"}
                   title={"rock stram vol.1"}
                   portfoliosMeta={[
@@ -36,7 +36,7 @@ export const AlbumsSection = () =>
               />
               <DiscItem
                   albumImgUrl={"#"}
-                  albumImgPath={"img/pics/music-album-03.jpg"}
+                  albumImgPath={"assets/img/pics/music-album-03.jpg"}
                   titleUrl={"#"}
                   title={"rocking star"}
                   portfoliosMeta={[
@@ -48,7 +48,7 @@ export const AlbumsSection = () =>
               />
               <DiscItem
                   albumImgUrl={"#"}
-                  albumImgPath={"img/pics/music-album-04.jpg"}
+                  albumImgPath={"assets/img/pics/music-album-04.jpg"}
                   titleUrl={"#"}
                   title={"live at berlin"}
                   portfoliosMeta={[
@@ -60,7 +60,7 @@ export const AlbumsSection = () =>
               />
               <DiscItem
                   albumImgUrl={"#"}
-                  albumImgPath={"img/pics/music-album-05.jpg"}
+                  albumImgPath={"assets/img/pics/music-album-05.jpg"}
                   titleUrl={"#"}
                   title={"Born to Rock"}
                   portfoliosMeta={[
@@ -72,7 +72,7 @@ export const AlbumsSection = () =>
               />
               <DiscItem
                   albumImgUrl={"#"}
-                  albumImgPath={"img/pics/music-album-06.jpg"}
+                  albumImgPath={"assets/img/pics/music-album-06.jpg"}
                   titleUrl={"#"}
                   title={"Musician Party"}
                   portfoliosMeta={[
@@ -84,7 +84,7 @@ export const AlbumsSection = () =>
               />
               <DiscItem
                   albumImgUrl={"#"}
-                  albumImgPath={"img/pics/music-album-07.jpg"}
+                  albumImgPath={"assets/img/pics/music-album-07.jpg"}
                   titleUrl={"#"}
                   title={"Go Loud Or Go Home"}
                   portfoliosMeta={[
@@ -96,7 +96,7 @@ export const AlbumsSection = () =>
               />
               <DiscItem
                   albumImgUrl={"#"}
-                  albumImgPath={"img/pics/music-album-08.jpg"}
+                  albumImgPath={"assets/img/pics/music-album-08.jpg"}
                   titleUrl={"#"}
                   title={"Just Rock"}
                   portfoliosMeta={[

@@ -62,10 +62,10 @@ export const VideoGridSection = () =>
         {/* <div className="col-md-6 col-xs-12 mb-0">
             <div className="video-item">
                 <div className="video-media">
-                    <img src="img/pics/img-05.jpg" alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
+                    <img src="assets/img/pics/img-05.jpg" alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
                     <div className="mask">
                         <a href="https://www.youtube.com/embed/hBn8ANP2l0M" title="Blue whisper" className="video-item-trigger zoom">
-                            <img src="img/svg/youtube-play-icon.svg" alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
+                            <img src="assets/img/svg/youtube-play-icon.svg" alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
                         </a>
                     </div>
                 </div>
@@ -91,10 +91,10 @@ export const VideoGridSection = () =>
         {/* <div className="col-md-6 col-xs-12 mb-0">
             <div className="video-item">
                 <div className="video-media">
-                    <img src="img/pics/video-item-02.jpg" alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
+                    <img src="assets/img/pics/video-item-02.jpg" alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
                     <div className="mask">
                         <a href="https://www.youtube.com/embed/hBn8ANP2l0M" title="Blue whisper" className="video-item-trigger zoom">
-                            <img src="img/svg/youtube-play-icon.svg" alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
+                            <img src="assets/img/svg/youtube-play-icon.svg" alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
                         </a>
                     </div>
                 </div>

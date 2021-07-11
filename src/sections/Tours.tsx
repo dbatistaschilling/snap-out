@@ -12,7 +12,7 @@ export const ToursSection = () =>
           <div className="latest-posts-carousel-03 owl-carousel">
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-01.jpg"}
+                  img={"assets/img/blog/music-band-post-01.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}
@@ -23,7 +23,7 @@ export const ToursSection = () =>
               />
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-02.jpg"}
+                  img={"assets/img/blog/music-band-post-02.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}
@@ -34,7 +34,7 @@ export const ToursSection = () =>
               />
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-03.jpg"}
+                  img={"assets/img/blog/music-band-post-03.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}
@@ -45,7 +45,7 @@ export const ToursSection = () =>
               />
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-01.jpg"}
+                  img={"assets/img/blog/music-band-post-01.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}
@@ -56,7 +56,7 @@ export const ToursSection = () =>
               />
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-02.jpg"}
+                  img={"assets/img/blog/music-band-post-02.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}
@@ -67,7 +67,7 @@ export const ToursSection = () =>
               />
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-03.jpg"}
+                  img={"assets/img/blog/music-band-post-03.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}
@@ -78,7 +78,7 @@ export const ToursSection = () =>
               />
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-01.jpg"}
+                  img={"assets/img/blog/music-band-post-01.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}
@@ -89,7 +89,7 @@ export const ToursSection = () =>
               />
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-02.jpg"}
+                  img={"assets/img/blog/music-band-post-02.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}
@@ -100,7 +100,7 @@ export const ToursSection = () =>
               />
               <BuzzItem
                   url={"#"}
-                  img={"img/blog/music-band-post-03.jpg"}
+                  img={"assets/img/blog/music-band-post-03.jpg"}
                   authorUrl={"#"}
                   authorName={"Musician"}
                   categoryUrl={"#"}

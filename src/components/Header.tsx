@@ -49,7 +49,7 @@ export const Header = ({ menuActive }: props) =>
                     <div className="col-md-12">
                         <MainNav
                             logoUrl={"/"}
-                            logoImgPath={"img/svg/logo-snap-out.svg"}
+                            logoImgPath={"assets/img/svg/logo-snap-out.svg"}
                             menuActive={menuActive}
                         />
                     </div>

@@ -13,28 +13,28 @@ export const StoreSection = () =>
       products={[
           {
               url: "#",
-              imgPath: "img/shop/shop-item-02.jpg",
+              imgPath: "assets/img/shop/shop-item-02.jpg",
               name: "rock ‘n roll",
               currency: "$",
               price: "40"
           },
           {
               url: "#",
-              imgPath: "img/shop/shop-item-03.jpg",
+              imgPath: "assets/img/shop/shop-item-03.jpg",
               name: "rock star",
               currency: "$",
               price: "40"
           },
           {
               url: "#",
-              imgPath: "img/shop/shop-item-04.jpg",
+              imgPath: "assets/img/shop/shop-item-04.jpg",
               name: "live at berlin",
               currency: "$",
               price: "40"
           },
           {
               url: "#",
-              imgPath: "img/shop/shop-item-05.jpg",
+              imgPath: "assets/img/shop/shop-item-05.jpg",
               name: "Champs Shirt",
               currency: "$",
               price: "40"

@@ -14,11 +14,11 @@ module.exports = withPlugins([
     imagesPublicPath: '/snap-out/out/_next/static/images/',
   }],
   {
-    basePath: '/snap-out/out',
-    assetPrefix: '/snap-out/out/',
-    env: {
-      BACKEND_URL: '/snap-out/out',
-  },
+    // basePath: '/snap-out',
+    // assetPrefix: '/snap-out/',
+  //   env: {
+  //     BACKEND_URL: '/snap-out',
+  // },
     exportPathMap: async function (
       defaultPathMap,
       { dev, dir, outDir, distDir, buildId }
