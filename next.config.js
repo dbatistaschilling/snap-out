@@ -11,13 +11,13 @@ module.exports = withPlugins([
       strip: true,
       verbose: true,
     },
-    imagesPublicPath: '/wallisconsultancy/_next/static/images/',
+    imagesPublicPath: '/snap-out/out/_next/static/images/',
   }],
   {
-    basePath: '/snap-out',
-    assetPrefix: '/snap-out/',
+    basePath: '/snap-out/out',
+    assetPrefix: '/snap-out/out/',
     env: {
-      BACKEND_URL: '/snap-out',
+      BACKEND_URL: '/snap-out/out',
   },
     exportPathMap: async function (
       defaultPathMap,
