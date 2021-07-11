@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "type-check": "tsc",
-    "export": "next export",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d out",
+    "publish": "subpath-as-branch --path dist --branch gh-pages"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",

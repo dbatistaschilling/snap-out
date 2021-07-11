@@ -1,4 +1,5 @@
 import React from 'react'
+import BasePathLink from '../BasePathLink'
 import { SocialLinks } from "./SocialLinks"
 
 type menuItem = {
@@ -40,9 +41,16 @@ export const Footer = ({
 
                         <li className="widget widget_text">
                             <div className="textwidget">
+
+                                <BasePathLink href={imgUrl}>
+                                    <a>
+                                        <img src={imgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
+                                    </a>
+                                </BasePathLink>
+{/*
                                 <a href={imgUrl}>
                                     <img src={imgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
-                                </a>
+                                </a> */}
                             </div>
                         </li>
                     </ul>
