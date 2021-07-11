@@ -8,8 +8,8 @@
     "start": "next start",
     "type-check": "tsc",
     "export": "next export",
-    "predeploy": "yarn export",
-    "deploy": "gh-pages -d out"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",

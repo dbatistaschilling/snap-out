@@ -497,7 +497,6 @@ var VolcannoInclude = {
 
             return false;
 
-            e.preventDefault();
         });
     },
     /**
@@ -989,13 +988,13 @@ jQuery(document).ready(function ($) {
     VolcannoInclude.masterSliderInit("masterslider-band");
 
     // INCLUDE LATEST PORTFOLIO CAROUSEL
-    // VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
+    VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
 
     // INCLUDE LATEST POSTS CAROUSEL
-    // VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
+    VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
 
     // FOOTER NEWSLETTER
-    // VolcannoInclude.magnificPopupInit('newsletter-popup');
+    VolcannoInclude.magnificPopupInit('newsletter-popup');
 
     // AUDIO POPUP
     VolcannoInclude.magnificPopupInit('audio-popup');
