@@ -17,6 +17,7 @@ const Layout = ({ children }: Props) => {
     useEffect(() => {
         if (firstLoad) {
             setFirstLoad(false)
+            router.push('/')
             location.reload()
         }
         if (!mainPage.some(section => router.asPath === section)) {
