@@ -12,14 +12,13 @@ const Layout = ({ children }: Props) => {
     const mainPage = ['/#', '/', '/#aboutSnapOut', '/#members', '/#events', '/#media', '/#contact']
     const [menuActive, setMenuActive] = useState(true)
     const [reload, setReload] = useState(true)
-    // const [firstLoad, setFirstLoad] = useState(true)
+    const [firstLoad, setFirstLoad] = useState(true)
 
     useEffect(() => {
-        // if (firstLoad) {
-        //     setFirstLoad(false)
-        //     router.push('/')
-        //     location.reload()
-        // }
+        if (firstLoad) {
+            setFirstLoad(false)
+            router.push('/')
+        }
         if (!mainPage.some(section => router.asPath === section)) {
             setMenuActive(false)
             setReload(false)
