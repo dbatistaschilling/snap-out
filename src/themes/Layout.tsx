@@ -14,15 +14,19 @@ const Layout = ({ children }: Props) => {
     const [reload, setReload] = useState(false)
 
     useEffect(() => {
-        const firstLoad = async () => {
+        function refreshPage(){
+            window.location.reload();
+        }
+        const firstLoad = async (refreshPage: () => void) => {
             const localFirsLoad = await localStorage.getItem('firstLoad')
             if (!localFirsLoad || reload) {
                 await localStorage.setItem('firstLoad', 'false')
-                router.push('/')
-                location.reload()
+                // router.push('/')
+                // location.reload()
+                refreshPage()
             }
         }
-        firstLoad()
+        firstLoad(refreshPage)
 
         if (!mainPage.some(section => router.asPath === section)) {
             setMenuActive(false)
