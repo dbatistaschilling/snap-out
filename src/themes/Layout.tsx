@@ -15,10 +15,6 @@ const Layout = ({ children }: Props) => {
     const [firstLoad, setFirstLoad] = useState(true)
 
     useEffect(() => {
-        if (firstLoad) {
-            setFirstLoad(false)
-            router.push('/')
-        }
         if (!mainPage.some(section => router.asPath === section)) {
             setMenuActive(false)
             setReload(false)
@@ -28,6 +24,13 @@ const Layout = ({ children }: Props) => {
                 router.push('/')
                 location.reload()
                 setReload(true)
+            }
+        }
+        return () => {
+            if (firstLoad) {
+                setFirstLoad(false)
+                router.push('/')
+                location.reload()
             }
         }
     }, [router.asPath])
