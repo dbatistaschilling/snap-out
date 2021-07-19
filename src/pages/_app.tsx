@@ -32,7 +32,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     if (
       prevPath === 'null' ||
       (prevPath !== '/' && currentPath === '/') ||
-      prevPath === currentPath) {
+      prevPath === currentPath ||
+      (!prevPath || !currentPath)) {
         router.replace('/')
         router.reload()
     }
