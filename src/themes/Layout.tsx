@@ -31,10 +31,8 @@ const Layout = ({ children }: Props) => {
 
     const refreshPage = async () => {
         const localFirsLoad = await localStorage.getItem('firstLoad')
-        if (!localFirsLoad) {
+        if (!localFirsLoad || reload) {
             await localStorage.setItem('firstLoad', 'false')
-            router.reload()
-        } else if (reload) {
             setReload(false)
             router.reload()
         }
