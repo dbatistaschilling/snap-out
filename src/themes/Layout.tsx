@@ -9,33 +9,36 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
     const router = useRouter()
-    const mainPage = ['/#', '/', '/#aboutSnapOut', '/#members', '/#events', '/#media', '/#contact']
+    // const mainPage = ['/#', '/', '/#aboutSnapOut', '/#members', '/#events', '/#media', '/#contact']
     const [menuActive, setMenuActive] = useState(true)
     const [reload, setReload] = useState(false)
 
     useEffect(() => {
-        function refreshPage(){
-            window.location.reload();
-        }
-        const firstLoad = async (refreshPage: () => void) => {
-            const localFirsLoad = await localStorage.getItem('firstLoad')
-            if (!localFirsLoad || reload) {
-                await localStorage.setItem('firstLoad', 'false')
-                // router.push('/')
-                // location.reload()
-                refreshPage()
-            }
-        }
-        firstLoad(refreshPage)
+        refreshPage()
+    }, [])
 
-        if (!mainPage.some(section => router.asPath === section)) {
+    useEffect(() => {
+        console.log(router);
+        if (!(router.pathname === '/') &&
+            !(router.pathname === `${process.env.BACKEND_URL}/`)) {
             setMenuActive(false)
             setReload(true)
         } else {
-            setReload(false)
             setMenuActive(true)
         }
-    }, [router.asPath])
+        refreshPage()
+    }, [router.pathname])
+
+    const refreshPage = async () => {
+        const localFirsLoad = await localStorage.getItem('firstLoad')
+        if (!localFirsLoad) {
+            await localStorage.setItem('firstLoad', 'false')
+            router.reload()
+        } else if (reload) {
+            setReload(false)
+            router.reload()
+        }
+    }
 
     return (
         <div>
