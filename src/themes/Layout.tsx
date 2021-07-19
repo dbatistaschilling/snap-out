@@ -1,7 +1,5 @@
 import React, { ReactNode } from 'react'
 import { Footer, Header } from "../components"
-import Script from 'next/script'
-
 
 type LayoutProps = {
     children?: ReactNode
