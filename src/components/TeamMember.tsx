@@ -20,7 +20,7 @@ export const TeamMember = ({
     <div className="team-member triggerAnimation animated" data-animate="fadeInUp" style={{ marginBottom: 20 }}>
       {
         process.env.NODE_ENV === "production" ? (
-          <Link href={`${process.env.BACKEND_URL}${url}`}>
+          <Link href={`${url}`}>
             <a>
               <img src={img} alt={alt} />
               <h2>

@@ -42,7 +42,7 @@ export const Footer = ({
                             <div className="textwidget">
                                 {
                                     process.env.NODE_ENV === 'production' ? (
-                                        <a href={`${process.env.BACKEND_URL}${imgUrl}`}>
+                                        <a href={`${imgUrl}`}>
                                             <img src={imgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
                                         </a>
                                     ) : (

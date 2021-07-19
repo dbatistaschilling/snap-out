@@ -16,9 +16,9 @@ module.exports = withPlugins([
   {
     // basePath: '/snap-out',
     // assetPrefix: '/snap-out/',
-    env: {
-      BACKEND_URL: '/snap-out',
-  },
+    // env: {
+    //   BACKEND_URL: '/snap-out',
+    // },
     exportPathMap: async function (
       defaultPathMap,
       { dev, dir, outDir, distDir, buildId }

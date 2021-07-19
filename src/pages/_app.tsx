@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   useEffect(() => {
     const reload = localStorage.getItem('RELOAD')
-    if ((router.pathname === '/' || router.pathname === `${process.env.BACKEND_URL}/`) && !reload) {
+    if (router.pathname === '/' && !reload) {
       // setCookie(null, 'RELOAD', 'true')
       localStorage.setItem('RELOAD', 'true')
       checkReload()
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   useEffect(() => {
     console.log(router.pathname);
-    if ((router.pathname === '/' || router.pathname === `${process.env.BACKEND_URL}/`)) {
+    if (router.pathname === '/') {
       setMenuActive(true)
       checkReload()
     } else {
@@ -32,11 +32,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     if (reload === 'true') {
       // setCookie(null, 'RELOAD', 'false')
       localStorage.setItem('RELOAD', 'false')
-      if (process.env.NODE_ENV === 'production') {
-        router.replace(`${process.env.BACKEND_URL}/`)
-      } else {
-        router.replace('/')
-      }
+      router.replace('/')
       router.reload()
     }
   }
