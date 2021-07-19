@@ -4,22 +4,17 @@ import { Footer, Header } from "../components"
 type LayoutProps = {
     children?: ReactNode
     menuActive: boolean
-    loader: boolean
 }
 
-const Layout = ({ children, menuActive, loader }: LayoutProps) =>
+const Layout = ({ children, menuActive }: LayoutProps) =>
 <div>
     <style global jsx>
     {` html { scroll-behavior: smooth; }`}
     </style>
 
-    {
-        loader && (
-            <div id="loader">
-                <div id="loading-status"></div>
-            </div>
-        )
-    }
+    <div id="loader">
+        <div id="loading-status"></div>
+    </div>
 
     <Header menuActive={menuActive} />
 

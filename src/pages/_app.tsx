@@ -5,29 +5,25 @@ import Layout from '../themes/Layout';
 function MyApp({ Component, pageProps, router }: AppProps) {
 
   const [menuActive, setMenuActive] = useState(true)
-  const [loader, setLoader] = useState(true)
 
   useEffect(() => {
     initialPathValues()
   }, [router.pathname]);
 
   async function initialPathValues() {
-    if (router.pathname === '/' && loader){
-      await setTimeout(changeLoader, 4000)
-    } else if (router.asPath.includes('#')) {
-      router.replace('/')
-      router.reload()
+    if (router.pathname === '/') {
+      setMenuActive(true)
     } else {
       setMenuActive(false)
     }
-  }
-
-  const changeLoader = () => {
-    setLoader(false)
+    if (router.asPath.includes('#')) {
+      router.replace('/')
+      router.reload()
+    }
   }
 
   return (
-      <Layout menuActive={menuActive} loader={loader}>
+      <Layout menuActive={menuActive} >
         <Component {...pageProps} />
       </Layout>
   )

@@ -72,11 +72,11 @@ jQuery(window).on("load", function () {
     // convertToSVG init
     convertToSVG()
 
-    jQuery("#loading-status").delay(500).fadeOut();
-    jQuery("#loader").delay(1000).fadeOut("slow");
+    jQuery("#loading-status").delay(1000).fadeOut();
+    jQuery("#loader").delay(1500).fadeOut("slow");
     setTimeout(function () {
         VolcannoInclude.triggerAnimation();
-    }, 1000);
+    }, 2500);
 
 
     // Read more animated button - width calculation
