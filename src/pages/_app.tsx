@@ -5,7 +5,12 @@ import Layout from '../themes/Layout';
 function MyApp({ Component, pageProps, router }: AppProps) {
 
   const [menuActive, setMenuActive] = useState(true)
+  useEffect(() => initialPathValues, []);
   useEffect(() => storePathValues, [router.pathname]);
+
+  function initialPathValues() {
+    globalThis?.sessionStorage;
+  }
 
   function storePathValues() {
     const storage = globalThis?.sessionStorage;
@@ -25,9 +30,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const checkReload = (storage: Storage) => {
     const prevPath = storage.getItem("prevPath");
     const currentPath = storage.getItem("currentPath");
-
-    console.log('prevPath', prevPath);
-    console.log('currentPath', currentPath);
 
     if (
       prevPath === 'null' ||
