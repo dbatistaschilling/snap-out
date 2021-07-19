@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, router, props }: MyAppProps) {
   const [menuActive, setMenuActive] = useState(true)
 
   useEffect(() => {
-    if (router.pathname === '/' && !props.reload) {
+    if ((router.pathname === '/' || router.pathname === `${process.env.BACKEND_URL}/`) && !props.reload) {
       setCookie(null, 'RELOAD', 'true', {
         path: '/'
       })
@@ -26,14 +26,14 @@ function MyApp({ Component, pageProps, router, props }: MyAppProps) {
   }, [])
 
   useEffect(() => {
-    if (router.pathname !== '/') {
+    if ((router.pathname === '/' || router.pathname === `${process.env.BACKEND_URL}/`)) {
+      setMenuActive(true)
+      checkReload()
+    } else {
       setCookie(null, 'RELOAD', 'true', {
         path: '/'
       })
       setMenuActive(false)
-    } else {
-      setMenuActive(true)
-      checkReload()
     }
   }, [router.pathname])
 
@@ -42,6 +42,7 @@ function MyApp({ Component, pageProps, router, props }: MyAppProps) {
       setCookie(null, 'RELOAD', 'false', {
         path: '/'
       })
+      router.replace('/')
       router.reload()
     }
   }
