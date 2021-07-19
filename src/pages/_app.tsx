@@ -5,32 +5,42 @@ import Layout from '../themes/Layout';
 function MyApp({ Component, pageProps, router }: AppProps) {
 
   const [menuActive, setMenuActive] = useState(true)
+  useEffect(() => storePathValues, [router.pathname]);
 
-  useEffect(() => {
-    const reload = localStorage.getItem('RELOAD')
-    if (router.pathname === '/' && !reload) {
-      localStorage.setItem('RELOAD', 'true')
-      checkReload()
-    }
-  }, [])
-
-  useEffect(() => {
-    console.log(router.pathname);
-    if (router.pathname === '/') {
-      setMenuActive(true)
-      checkReload()
+  function storePathValues() {
+    const storage = globalThis?.sessionStorage;
+    if (!storage) return;
+    const prevPath = storage.getItem("currentPath");
+    if (!prevPath) {
+      storage.setItem("prevPath", 'null');
     } else {
-      localStorage.setItem('RELOAD', 'true')
-      setMenuActive(false)
+      storage.setItem("prevPath", prevPath);
     }
-  }, [router.pathname])
+    storage.setItem("currentPath", globalThis.location.pathname);
 
-  const checkReload = () => {
-    const reload = localStorage.getItem('RELOAD')
-    if (reload === 'true') {
-      localStorage.setItem('RELOAD', 'false')
+    checkMenu(storage)
+    checkReload(storage)
+  }
+
+  const checkReload = (storage: Storage) => {
+    const prevPath = storage.getItem("prevPath");
+    const currentPath = storage.getItem("currentPath");
+
+    console.log('prevPath', prevPath);
+    console.log('currentPath', currentPath);
+
+    if (prevPath === 'null' || (prevPath !== '/' && currentPath === '/')) {
       router.replace('/')
       router.reload()
+    }
+  }
+
+  const checkMenu = (storage: Storage) => {
+    const currentPath = storage.getItem("currentPath");
+    if (currentPath === '/'){
+      setMenuActive(true)
+    } else {
+      setMenuActive(false)
     }
   }
 
