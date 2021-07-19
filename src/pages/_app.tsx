@@ -18,9 +18,7 @@ function MyApp({ Component, pageProps, router, props }: MyAppProps) {
 
   useEffect(() => {
     if ((router.pathname === '/' || router.pathname === `${process.env.BACKEND_URL}/`) && !props.reload) {
-      setCookie(null, 'RELOAD', 'true', {
-        path: '/'
-      })
+      setCookie(null, 'RELOAD', 'true')
       checkReload()
     }
   }, [])
@@ -30,18 +28,14 @@ function MyApp({ Component, pageProps, router, props }: MyAppProps) {
       setMenuActive(true)
       checkReload()
     } else {
-      setCookie(null, 'RELOAD', 'true', {
-        path: '/'
-      })
+      setCookie(null, 'RELOAD', 'true')
       setMenuActive(false)
     }
   }, [router.pathname])
 
   const checkReload = () => {
     if (props.reload === 'true') {
-      setCookie(null, 'RELOAD', 'false', {
-        path: '/'
-      })
+      setCookie(null, 'RELOAD', 'false')
       router.replace('/')
       router.reload()
     }
@@ -58,10 +52,6 @@ MyApp.getInitialProps = async (appContext: AppContext) => {
   // calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(appContext);
   const cookies = parseCookies(appContext.ctx)
-
-  setCookie(null, 'PRODUCTION_TEST', 'true', {
-    path: '/'
-  })
 
   return {
     ...appProps,
