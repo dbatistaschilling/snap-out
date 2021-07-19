@@ -59,6 +59,10 @@ MyApp.getInitialProps = async (appContext: AppContext) => {
   const appProps = await App.getInitialProps(appContext);
   const cookies = parseCookies(appContext.ctx)
 
+  setCookie(null, 'PRODUCTION_TEST', 'true', {
+    path: '/'
+  })
+
   return {
     ...appProps,
     props: {
