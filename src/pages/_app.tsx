@@ -12,10 +12,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   }, [router.pathname]);
 
   async function initialPathValues() {
-    console.log(router.asPath);
-
     if (router.pathname === '/' && loader){
-      await setTimeout(changeLoader, 3000)
+      await setTimeout(changeLoader, 4000)
     } else if (router.asPath.includes('#')) {
       router.replace('/')
       router.reload()
