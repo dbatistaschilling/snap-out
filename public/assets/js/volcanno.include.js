@@ -13,10 +13,6 @@
  * @return void
  */
 
- const isTouchDevice = () => {
-    return Modernizr.touch;
-}
-
 function convertToSVG() {
     jQuery(".svg-animate").each(function () {
         var $img = jQuery(this);
