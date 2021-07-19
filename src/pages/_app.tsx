@@ -29,9 +29,12 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     console.log('prevPath', prevPath);
     console.log('currentPath', currentPath);
 
-    if (prevPath === 'null' || (prevPath !== '/' && currentPath === '/')) {
-      router.replace('/')
-      router.reload()
+    if (
+      prevPath === 'null' ||
+      (prevPath !== '/' && currentPath === '/') ||
+      prevPath === currentPath) {
+        router.replace('/')
+        router.reload()
     }
   }
 
