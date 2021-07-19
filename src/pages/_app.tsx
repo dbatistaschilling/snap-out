@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
     const reload = localStorage.getItem('RELOAD')
     if (router.pathname === '/' && !reload) {
-      // setCookie(null, 'RELOAD', 'true')
       localStorage.setItem('RELOAD', 'true')
       checkReload()
     }
@@ -21,7 +20,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       setMenuActive(true)
       checkReload()
     } else {
-      // setCookie(null, 'RELOAD', 'true')
       localStorage.setItem('RELOAD', 'true')
       setMenuActive(false)
     }
@@ -30,7 +28,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const checkReload = () => {
     const reload = localStorage.getItem('RELOAD')
     if (reload === 'true') {
-      // setCookie(null, 'RELOAD', 'false')
       localStorage.setItem('RELOAD', 'false')
       router.replace('/')
       router.reload()
