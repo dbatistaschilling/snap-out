@@ -24,6 +24,8 @@ function MyApp({ Component, pageProps, router, props }: MyAppProps) {
   }, [])
 
   useEffect(() => {
+    console.log(router.pathname);
+
     if ((router.pathname === '/' || router.pathname === `${process.env.BACKEND_URL}/`)) {
       setMenuActive(true)
       checkReload()
@@ -36,7 +38,11 @@ function MyApp({ Component, pageProps, router, props }: MyAppProps) {
   const checkReload = () => {
     if (props.reload === 'true') {
       setCookie(null, 'RELOAD', 'false')
-      router.replace('/')
+      if (process.env.NODE_ENV === 'production') {
+        router.replace(`${process.env.BACKEND_URL}/`)
+      } else {
+        router.replace('/')
+      }
       router.reload()
     }
   }
