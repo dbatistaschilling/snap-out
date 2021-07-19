@@ -5,53 +5,31 @@ import Layout from '../themes/Layout';
 function MyApp({ Component, pageProps, router }: AppProps) {
 
   const [menuActive, setMenuActive] = useState(true)
-  useEffect(() => initialPathValues, []);
-  useEffect(() => storePathValues, [router.pathname]);
+  const [loader, setLoader] = useState(true)
 
-  function initialPathValues() {
-    globalThis?.sessionStorage;
-  }
+  useEffect(() => {
+    initialPathValues()
+  }, [router.pathname]);
 
-  function storePathValues() {
-    const storage = globalThis?.sessionStorage;
-    if (!storage) return;
-    const prevPath = storage.getItem("currentPath");
-    if (!prevPath) {
-      storage.setItem("prevPath", 'null');
-    } else {
-      storage.setItem("prevPath", prevPath);
-    }
-    storage.setItem("currentPath", globalThis.location.pathname);
+  async function initialPathValues() {
+    console.log(router.asPath);
 
-    checkMenu(storage)
-    checkReload(storage)
-  }
-
-  const checkReload = (storage: Storage) => {
-    const prevPath = storage.getItem("prevPath");
-    const currentPath = storage.getItem("currentPath");
-
-    if (
-      prevPath === 'null' ||
-      (prevPath !== '/' && currentPath === '/') ||
-      prevPath === currentPath ||
-      (!prevPath || !currentPath)) {
-        router.replace('/')
-        router.reload()
-    }
-  }
-
-  const checkMenu = (storage: Storage) => {
-    const currentPath = storage.getItem("currentPath");
-    if (currentPath === '/'){
-      setMenuActive(true)
+    if (router.pathname === '/' && loader){
+      await setTimeout(changeLoader, 3000)
+    } else if (router.asPath.includes('#')) {
+      router.replace('/')
+      router.reload()
     } else {
       setMenuActive(false)
     }
   }
 
+  const changeLoader = () => {
+    setLoader(false)
+  }
+
   return (
-      <Layout menuActive={menuActive}>
+      <Layout menuActive={menuActive} loader={loader}>
         <Component {...pageProps} />
       </Layout>
   )
