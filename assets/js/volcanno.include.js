@@ -13,200 +13,7 @@
  * @return void
  */
 
-function convertToSVG() {
-    jQuery(".svg-animate").each(function () {
-        var $img = jQuery(this);
-        var imgID = $img.attr("id");
-        var imgClass = $img.attr("class");
-        var imgURL = $img.attr("src");
-
-        jQuery.get(imgURL, function (data) {
-            // Get the SVG tag, ignore the rest
-            var $svg = jQuery(data).find("svg");
-
-            // Add replaced image's ID to the new SVG
-            if (typeof imgID !== "undefined") {
-                $svg = $svg.attr("id", imgID);
-            }
-            // Add replaced image's classes to the new SVG
-            if (typeof imgClass !== "undefined") {
-                $svg = $svg.attr("class", imgClass + " replaced-svg");
-            }
-
-            // Remove any invalid XML tags as per http://validator.w3.org
-            $svg = $svg.removeAttr("xmlns:a");
-
-            // Replace image with new SVG
-            $img.replaceWith($svg);
-
-        }, "xml");
-
-    });
-}
-
-/**
- * Master slider blog - placing navigation buttons inside of pi-container
- *
- * @returns void
- */
-function blogSliderNavPosition() {
-    var blogSliderPrevArrow = jQuery("#masterslider-blog .ms-nav-prev");
-
-    var blogSliderNextArrow = jQuery("#masterslider-blog .ms-nav-next");
-    var blogSliderContentContainer = jQuery(".master-slider.with-inner-nav .pi-container");
-    var piContainerHeight = blogSliderContentContainer.height();
-    var piContainerPosition = blogSliderContentContainer.position();
-    var navPrevArrow = blogSliderPrevArrow.height();
-    var navNextArrow = blogSliderNextArrow.height();
-    jQuery("#masterslider-blog .ms-nav-prev, #masterslider-blog .ms-nav-next").css("height", piContainerHeight / 2);
-    blogSliderPrevArrow.css("top", (piContainerPosition.top + piContainerHeight) - navPrevArrow);
-    blogSliderNextArrow.css("top", (piContainerPosition.top + piContainerHeight - 2) - navNextArrow * 2);
-}
-
-/**
- * Runs on load only
- */
-
-jQuery(window).on("load", function () {
-
-    // convertToSVG init
-    convertToSVG()
-
-    jQuery("#loading-status").delay(1000).fadeOut();
-    jQuery("#loader").delay(1500).fadeOut("slow");
-    setTimeout(function () {
-        VolcannoInclude.triggerAnimation();
-    }, 2500);
-
-
-    // Read more animated button - width calculation
-    var moreBtnWidth = jQuery(".more-btn").width();
-
-    jQuery(".more-btn.btn-animated-hidden").css("left", -moreBtnWidth + 8);
-    if (jQuery(".master-slider").hasClass("with-inner-nav")) {
-        setTimeout(function () {
-            blogSliderNavPosition();
-        }, 1000);
-    }
-});
-
-jQuery(window).on("resize", function () {
-    if (jQuery(".master-slider").hasClass("with-inner-nav")) {
-        blogSliderNavPosition();
-    }
-});
-
-/**
- * Runs on both load and resize
- */
-jQuery(window).on("load resize", function () {
-
-    if (
-            ((navigator.userAgent.match(/iPad/i)) && (navigator.userAgent.match(/iPad/i) !== null)
-                    || (navigator.userAgent.match(/iPhone/i)) && (navigator.userAgent.match(/iPhone/i) !== null)
-                    || (navigator.userAgent.match(/Android/i)) && (navigator.userAgent.match(/Android/i) !== null)
-                    || (navigator.userAgent.match(/BlackBerry/i)) && (navigator.userAgent.match(/BlackBerry/i) !== null)
-                    || (navigator.userAgent.match(/iemobile/i)) && (navigator.userAgent.match(/iemobile/i) !== null)
-                    ) && (VolcannoInclude.isTouchDevice())
-            )
-    {
-        jQuery(".more-btn.btn-animated-hidden").addClass("more-touch");
-    }
-    else {
-        jQuery(".more-btn.btn-animated-hidden").removeClass("more-touch");
-    }
-
-
-    /**
-     * Navigation
-     */
-
-    var windowWidth = jQuery(window).width(),
-            dropdownItem = jQuery(".navbar-nav > li.dropdown");
-    if (!VolcannoInclude.isTouchDevice() && (windowWidth >= 991)) {
-        dropdownItem.addClass("hover");
-    } else {
-        dropdownItem.removeClass("hover");
-    }
-
-});
-
-
-(jQuery)(function ($) {
-
-    /**
-     * Search animation
-     */
-    if (!VolcannoInclude.isTouchDevice() || jQuery(".header-wrapper").hasClass("header-style-03") || (jQuery(window).width() > 992) && VolcannoInclude.isTouchDevice()) {
-        jQuery("#header").on("click", "#search", function (e) {
-            e.preventDefault();
-
-            jQuery(this).find("#m_search").slideDown(200).focus();
-        });
-
-        jQuery("#m_search").focusout(function (e) {
-            jQuery(e.target).slideUp();
-        });
-    }
-
-    /**
-     * Subnavigation
-     */
-    (function () {
-
-        jQuery("ul.dropdown-menu [data-toggle=dropdown]").on("click", function (event) {
-            // Avoid following the href location when clicking
-            event.preventDefault();
-            // Avoid having the menu to close when clicking
-            event.stopPropagation();
-            // If a menu is already open we close it
-            jQuery(this).closest(".dropdown-submenu").toggleClass("open");
-            console.log("dropdown");
-        });
-    })();
-
-    /**
-     * Set footer as static if there isn't enough content
-     */
-    if (jQuery(window).height() > jQuery('body').height()) {
-        jQuery('#footer-wrapper').addClass('static');
-    }
-
-    /**
-     * Content tabs
-     */
-    (function () {
-        jQuery(".tabs").each(function () {
-            var $tabLis = jQuery(this).find("li");
-            var $tabContent = jQuery(this).next(".tab-content-wrap").find(".tab-content");
-
-            $tabContent.hide();
-            $tabLis.first().addClass("active").show();
-            $tabContent.first().show();
-        });
-
-        jQuery(".tabs").on("click", "li", function (e) {
-            var $this = jQuery(this);
-            var parentUL = $this.parent();
-            var tabContent = parentUL.next(".tab-content-wrap");
-
-            parentUL.children().removeClass("active");
-            $this.addClass("active");
-
-            tabContent.find(".tab-content").hide();
-            var showById = jQuery($this.find("a").attr("href"));
-            tabContent.find(showById).fadeIn();
-
-            e.preventDefault();
-        });
-    })();
-
-    // Init scripts on page load
-    VolcannoInclude.init();
-
-});
-
-var VolcannoInclude = {
+ var VolcannoInclude = {
     /**
      * Init function
      * @param void
@@ -981,6 +788,198 @@ var VolcannoInclude = {
     }
 };
 
+function convertToSVG() {
+    jQuery(".svg-animate").each(function () {
+        var $img = jQuery(this);
+        var imgID = $img.attr("id");
+        var imgClass = $img.attr("class");
+        var imgURL = $img.attr("src");
+
+        jQuery.get(imgURL, function (data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find("svg");
+
+            // Add replaced image's ID to the new SVG
+            if (typeof imgID !== "undefined") {
+                $svg = $svg.attr("id", imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if (typeof imgClass !== "undefined") {
+                $svg = $svg.attr("class", imgClass + " replaced-svg");
+            }
+
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr("xmlns:a");
+
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+
+        }, "xml");
+
+    });
+}
+
+/**
+ * Master slider blog - placing navigation buttons inside of pi-container
+ *
+ * @returns void
+ */
+function blogSliderNavPosition() {
+    var blogSliderPrevArrow = jQuery("#masterslider-blog .ms-nav-prev");
+
+    var blogSliderNextArrow = jQuery("#masterslider-blog .ms-nav-next");
+    var blogSliderContentContainer = jQuery(".master-slider.with-inner-nav .pi-container");
+    var piContainerHeight = blogSliderContentContainer.height();
+    var piContainerPosition = blogSliderContentContainer.position();
+    var navPrevArrow = blogSliderPrevArrow.height();
+    var navNextArrow = blogSliderNextArrow.height();
+    jQuery("#masterslider-blog .ms-nav-prev, #masterslider-blog .ms-nav-next").css("height", piContainerHeight / 2);
+    blogSliderPrevArrow.css("top", (piContainerPosition.top + piContainerHeight) - navPrevArrow);
+    blogSliderNextArrow.css("top", (piContainerPosition.top + piContainerHeight - 2) - navNextArrow * 2);
+}
+
+/**
+ * Runs on load only
+ */
+
+jQuery(window).on("load", function () {
+
+    // convertToSVG init
+    convertToSVG()
+
+    jQuery("#loading-status").delay(500).fadeOut();
+    jQuery("#loader").delay(1000).fadeOut("slow");
+    setTimeout(function () {
+        VolcannoInclude.triggerAnimation();
+    }, 1500);
+
+    // Read more animated button - width calculation
+    var moreBtnWidth = jQuery(".more-btn").width();
+
+    jQuery(".more-btn.btn-animated-hidden").css("left", -moreBtnWidth + 8);
+    if (jQuery(".master-slider").hasClass("with-inner-nav")) {
+        setTimeout(function () {
+            blogSliderNavPosition();
+        }, 1000);
+    }
+});
+
+jQuery(window).on("resize", function () {
+    if (jQuery(".master-slider").hasClass("with-inner-nav")) {
+        blogSliderNavPosition();
+    }
+});
+
+/**
+ * Runs on both load and resize
+ */
+jQuery(window).on("load resize", function () {
+
+    if (
+            ((navigator.userAgent.match(/iPad/i)) && (navigator.userAgent.match(/iPad/i) !== null)
+                    || (navigator.userAgent.match(/iPhone/i)) && (navigator.userAgent.match(/iPhone/i) !== null)
+                    || (navigator.userAgent.match(/Android/i)) && (navigator.userAgent.match(/Android/i) !== null)
+                    || (navigator.userAgent.match(/BlackBerry/i)) && (navigator.userAgent.match(/BlackBerry/i) !== null)
+                    || (navigator.userAgent.match(/iemobile/i)) && (navigator.userAgent.match(/iemobile/i) !== null)
+                    ) && (VolcannoInclude.isTouchDevice())
+            )
+    {
+        jQuery(".more-btn.btn-animated-hidden").addClass("more-touch");
+    }
+    else {
+        jQuery(".more-btn.btn-animated-hidden").removeClass("more-touch");
+    }
+
+
+    /**
+     * Navigation
+     */
+
+    var windowWidth = jQuery(window).width(),
+            dropdownItem = jQuery(".navbar-nav > li.dropdown");
+    if (!VolcannoInclude.isTouchDevice() && (windowWidth >= 991)) {
+        dropdownItem.addClass("hover");
+    } else {
+        dropdownItem.removeClass("hover");
+    }
+
+});
+
+
+(jQuery)(function ($) {
+
+    /**
+     * Search animation
+     */
+    // if (!VolcannoInclude.isTouchDevice() || jQuery(".header-wrapper").hasClass("header-style-03") || (jQuery(window).width() > 992) && VolcannoInclude.isTouchDevice()) {
+    //     jQuery("#header").on("click", "#search", function (e) {
+    //         e.preventDefault();
+
+    //         jQuery(this).find("#m_search").slideDown(200).focus();
+    //     });
+
+    //     jQuery("#m_search").focusout(function (e) {
+    //         jQuery(e.target).slideUp();
+    //     });
+    // }
+
+    /**
+     * Subnavigation
+     */
+    (function () {
+
+        jQuery("ul.dropdown-menu [data-toggle=dropdown]").on("click", function (event) {
+            // Avoid following the href location when clicking
+            event.preventDefault();
+            // Avoid having the menu to close when clicking
+            event.stopPropagation();
+            // If a menu is already open we close it
+            jQuery(this).closest(".dropdown-submenu").toggleClass("open");
+            console.log("dropdown");
+        });
+    })();
+
+    /**
+     * Set footer as static if there isn't enough content
+     */
+    if (jQuery(window).height() > jQuery('body').height()) {
+        jQuery('#footer-wrapper').addClass('static');
+    }
+
+    /**
+     * Content tabs
+     */
+    (function () {
+        jQuery(".tabs").each(function () {
+            var $tabLis = jQuery(this).find("li");
+            var $tabContent = jQuery(this).next(".tab-content-wrap").find(".tab-content");
+
+            $tabContent.hide();
+            $tabLis.first().addClass("active").show();
+            $tabContent.first().show();
+        });
+
+        jQuery(".tabs").on("click", "li", function (e) {
+            var $this = jQuery(this);
+            var parentUL = $this.parent();
+            var tabContent = parentUL.next(".tab-content-wrap");
+
+            parentUL.children().removeClass("active");
+            $this.addClass("active");
+
+            tabContent.find(".tab-content").hide();
+            var showById = jQuery($this.find("a").attr("href"));
+            tabContent.find(showById).fadeIn();
+
+            e.preventDefault();
+        });
+    })();
+
+    // Init scripts on page load
+    VolcannoInclude.init();
+
+});
+
 jQuery(document).ready(function ($) {
     'use strict';
 
@@ -988,33 +987,14 @@ jQuery(document).ready(function ($) {
     VolcannoInclude.masterSliderInit("masterslider-band");
 
     // INCLUDE LATEST PORTFOLIO CAROUSEL
-    VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
+    // VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
 
     // INCLUDE LATEST POSTS CAROUSEL
-    VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
+    // VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
 
     // FOOTER NEWSLETTER
-    VolcannoInclude.magnificPopupInit('newsletter-popup');
+    // VolcannoInclude.magnificPopupInit('newsletter-popup');
 
     // AUDIO POPUP
-    VolcannoInclude.magnificPopupInit('audio-popup');
+    // VolcannoInclude.magnificPopupInit('audio-popup');
 });
-
-// function jqueryRun() {
-//     // MASTER SLIDER START
-//     VolcannoInclude.masterSliderInit("masterslider-band");
-
-//     // INCLUDE LATEST PORTFOLIO CAROUSEL
-//     VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
-
-//     // INCLUDE LATEST POSTS CAROUSEL
-//     VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
-
-//     // FOOTER NEWSLETTER
-//     VolcannoInclude.magnificPopupInit('newsletter-popup');
-
-//     // AUDIO POPUP
-//     VolcannoInclude.magnificPopupInit('audio-popup');
-// }
-
-// jqueryRun()
