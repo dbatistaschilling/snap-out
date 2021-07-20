@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     initialPathValues()
   }, [router.pathname]);
 
-  async function initialPathValues() {
+  function initialPathValues() {
     if (router.pathname === '/') {
       setMenuActive(true)
     } else {
