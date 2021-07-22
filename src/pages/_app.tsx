@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
+import { AppProvider } from '../contexts/app-cotext';
 import Layout from '../themes/Layout';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
@@ -7,7 +8,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const [menuActive, setMenuActive] = useState(true)
 
   useEffect(() => {
-    initialPathValues()
+    initialPathValues();
   }, [router.pathname]);
 
   async function initialPathValues() {
@@ -23,9 +24,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   }
 
   return (
+    <AppProvider>
       <Layout menuActive={menuActive} >
         <Component {...pageProps} />
       </Layout>
+    </AppProvider>
   )
 }
 

@@ -30,11 +30,11 @@ export const MainNav = ({
                 }
             </div>
 
-            {/* <button className="hamburger navbar-toggle hamburger--slider-r" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+            <button className="hamburger navbar-toggle hamburger--slider-r" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
                 <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
                 </span>
-            </button> */}
+            </button>
         </div>
 {/*
         <div id="search">
