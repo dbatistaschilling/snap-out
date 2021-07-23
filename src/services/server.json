@@ -1,7 +1,68 @@
 {
-  "members": [
-    {
-      "name": "Davi"
-    }
-  ]
+  "memberSection": {
+    "title": "MEMBRI DELLA BAND",
+    "members": [
+      {
+        "id": 1,
+        "name": "Flavia Mazzetti",
+        "role": "Voce, Chitarra",
+        "image": "assets/img/pics/member1.png",
+        "alt": "Flavia Mazzetti - Voce, Chitarra",
+        "url": "/flavia-mazzetti"
+      },
+      {
+        "id": 2,
+        "name": "Elisa Marsella",
+        "role": "Chitarra, Tastiera, Cori",
+        "image": "assets/img/pics/member2.png",
+        "alt": "Elisa Marsella - Chitarra, Tastiera, Cori",
+        "url": "/elisa-marsella"
+      },
+      {
+        "id": 3,
+        "name": "Raul Ruggieri",
+        "role": "Basso, Tastiere, 2°Voce",
+        "image": "assets/img/pics/member3.png",
+        "alt": "Raul Ruggieri - Basso, Tastiere, 2°Voce",
+        "url": "/raul-ruggieri"
+      },
+      {
+        "id": 4,
+        "name": "Laca Ruggieri",
+        "role": "Batteria, Violino, Voce distorta",
+        "image": "assets/img/pics/member4.png",
+        "alt": "Laca Ruggieri - Batteria, Violino, Voce distorta",
+        "url": "/laca-ruggieri"
+      },
+      {
+        "id": 5,
+        "name": "Luca Parente",
+        "role": "Chitarra, cori",
+        "image": "assets/img/pics/member5.png",
+        "alt": "Luca Parente - Chitarra, cori",
+        "url": "/luca-parente"
+      }
+    ]
+  },
+  "aboutSection": {
+    "title": "Riguardo Snap–Out",
+    "paragraphs": [
+      {
+        "id": 1,
+        "text": "Il nome della Band dopo la pandemia, indica la rinascita dopo un momento oscuro. Sono un gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."
+      },
+      {
+        "id": 2,
+        "text": "Nella loro carriera il gruppo ha vinto sia premi della critica che primi premi in concorsi nazionali su tematiche sociali suonando su palchi importanti come Palatlantico Live. Nella loro giovane carriera hanno già consolidato più di 100 esibizioni in locali importanti della realtà laziale ed italiana suonando davanti a pubblici di migliaia di persone."
+      },
+      {
+        "id": 3,
+        "text": "Gli Snap – Out sono sensibili ai problemi sociali, all’integrazione, alla inclusione ed a tutte le cause delle persone fragili, uno dei problemi che per loro è prioritario è quello di decidere di vivere in un mondo migliore, non distrutto dall’inquinamento e dalle opere umane."
+      },
+      {
+        "id": 4,
+        "text": "Il gruppo è la testimonianza di una inclusione riuscita avendo tra i suoi membri un ragazzo Asperger. Tra i loro idoli, Matthew Bellamy, Thom Yorke, Flea, John Frusciante, Greta Thunberg."
+      }
+    ]
+  }
 }

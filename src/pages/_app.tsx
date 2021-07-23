@@ -2,25 +2,24 @@ import type { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
 import { AppProvider } from '../contexts/app-cotext';
 import Layout from '../themes/Layout';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 
   const [menuActive, setMenuActive] = useState(true)
 
   useEffect(() => {
-    initialPathValues();
+    onRouteChange();
   }, [router.pathname]);
 
-  async function initialPathValues() {
-    if (router.pathname === '/') {
+  async function onRouteChange() {
+    if (router.pathname === '/' && !menuActive) {
       setMenuActive(true)
-    } else {
-      setMenuActive(false)
-    }
-    if (router.asPath.includes('#')) {
       router.replace('/')
       router.reload()
-    }
+    } else if (router.pathname !== '/')  {
+      setMenuActive(false)
+    };
   }
 
   return (

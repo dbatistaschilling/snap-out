@@ -1,6 +1,5 @@
-import React, { ReactNode, useContext, useEffect } from 'react'
+import React, { ReactNode } from 'react'
 import { Footer, Header } from "../components"
-import { AppContext } from '../contexts/app-cotext'
 
 type LayoutProps = {
     children?: ReactNode
@@ -8,17 +7,6 @@ type LayoutProps = {
 }
 
 const Layout = ({ children, menuActive }: LayoutProps) => {
-
-    const { data, notLoading } = useContext(AppContext)
-    useEffect(() => {
-        // const fetchVolcanno = async () => {
-        //     const volcanno = (await import('../../public/assets/js/volcanno.include')).default
-        //     volcanno()
-        // }
-        // if (notLoading) {
-        //     fetchVolcanno()
-        // }
-    }, [notLoading])
 
     return (
         <div>

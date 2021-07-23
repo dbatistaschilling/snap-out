@@ -1,18 +1,20 @@
 import React, { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
-import { MemberType } from "../interfaces";
+import { MemberSectionType } from "../interfaces";
+import { AboutSectionType } from "../interfaces/AboutType";
 import api from "../services/api";
 
 type AppProviderProps = {
   children: ReactNode;
 };
 
-interface DataProps {
-  members: MemberType[] | [];
-}
-
 interface AppContextData {
   notLoading: boolean;
   data: DataProps;
+}
+
+interface DataProps {
+  memberSection: MemberSectionType;
+  aboutSection: AboutSectionType;
 }
 
 export const AppContext = createContext({} as AppContextData);
@@ -20,7 +22,8 @@ export const AppContext = createContext({} as AppContextData);
 export const AppProvider = ({children}: AppProviderProps) => {
   const [notLoading, setNotLoading] = useState<boolean>(false)
   const [data, setData] = useState<DataProps>({
-    members: []
+    memberSection: {},
+    aboutSection: {}
   })
 
   useEffect(() => {
@@ -40,7 +43,7 @@ export const AppProvider = ({children}: AppProviderProps) => {
 
     let key: keyof typeof data;
     for (key in data){
-      if (data[key].length === 0) {
+      if (Object.keys(data[key]).length === 0) {
         fetchData(key, setData)
       }
     }
@@ -50,11 +53,11 @@ export const AppProvider = ({children}: AppProviderProps) => {
     let loading: boolean = false
     let key: keyof typeof data;
     for (key in data){
-      if (data[key].length === 0) {
+      if (Object.keys(data[key]).length === 0) {
         loading = true
       }
     }
-    !loading &&   setNotLoading(true)
+    !loading && setNotLoading(true)
   }, [data])
 
   return (
