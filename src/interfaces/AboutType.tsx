@@ -4,6 +4,7 @@ export type AboutParagraphType = {
 }
 
 export type AboutSectionType = {
+  id?: number
   title?: string
   paragraphs?: AboutParagraphType[]
 }

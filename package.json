@@ -5,6 +5,7 @@
   "scripts": {
     "server": "json-server --watch ./src/services/server.json --port 3333",
     "dev-server": "concurrently \"yarn server\" \"yarn dev\"",
+    "start-server": "concurrently \"yarn server\" \"yarn start\"",
     "dev": "next",
     "build": "next build && next export",
     "start": "next start",

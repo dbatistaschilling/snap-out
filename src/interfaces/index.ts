@@ -1,1 +1,5 @@
+export * from './AboutType'
+export * from './ContactType'
+export * from './EventType'
+export * from './MediaType'
 export * from './MemberType'

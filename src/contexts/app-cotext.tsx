@@ -1,5 +1,5 @@
 import React, { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
-import { MemberSectionType } from "../interfaces";
+import { ContactSectionType, EventSectionType, MediaSectionType, MemberSectionType } from "../interfaces";
 import { AboutSectionType } from "../interfaces/AboutType";
 import api from "../services/api";
 
@@ -13,8 +13,11 @@ interface AppContextData {
 }
 
 interface DataProps {
-  memberSection: MemberSectionType;
   aboutSection: AboutSectionType;
+  contactSection: ContactSectionType;
+  eventSection: EventSectionType;
+  mediaSection: MediaSectionType;
+  memberSection: MemberSectionType;
 }
 
 export const AppContext = createContext({} as AppContextData);
@@ -22,8 +25,11 @@ export const AppContext = createContext({} as AppContextData);
 export const AppProvider = ({children}: AppProviderProps) => {
   const [notLoading, setNotLoading] = useState<boolean>(false)
   const [data, setData] = useState<DataProps>({
+    aboutSection: {},
+    contactSection: {},
+    eventSection: {},
+    mediaSection: {},
     memberSection: {},
-    aboutSection: {}
   })
 
   useEffect(() => {

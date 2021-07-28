@@ -8,6 +8,7 @@ export type MemberType = {
 }
 
 export type MemberSectionType = {
+  id?: number
   title?: string
   members?: MemberType[]
 }

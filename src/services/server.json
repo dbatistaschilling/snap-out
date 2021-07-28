@@ -1,5 +1,6 @@
 {
   "memberSection": {
+    "id": 1,
     "title": "MEMBRI DELLA BAND",
     "members": [
       {
@@ -45,6 +46,7 @@
     ]
   },
   "aboutSection": {
+    "id": 1,
     "title": "Riguardo Snap–Out",
     "paragraphs": [
       {
@@ -64,5 +66,49 @@
         "text": "Il gruppo è la testimonianza di una inclusione riuscita avendo tra i suoi membri un ragazzo Asperger. Tra i loro idoli, Matthew Bellamy, Thom Yorke, Flea, John Frusciante, Greta Thunberg."
       }
     ]
+  },
+  "eventSection": {
+    "id": 1,
+    "title": "LE DATE DEL TOUR EUROPEO",
+    "events": [
+      {
+        "id": 1,
+        "weekDay": "GIOVEDÌ",
+        "dayMonth": "6 agosto",
+        "city": "PORTO CESAREO",
+        "local": "Myconos"
+      }
+    ]
+  },
+  "mediaSection": {
+    "id": 1,
+    "title": "VIDEO",
+    "videos": [
+      {
+        "id": 1,
+        "url": "https://www.youtube.com/embed/IXQJ3qwHL40",
+        "text": "MADVILLE - I Gatti di Schrödinger - New Born (Muse cover)"
+      },
+      {
+        "id": 2,
+        "url": "https://www.youtube.com/embed/ILC6It72y5o",
+        "text": "I Gatti Di Schrödinger - Bataclan - live@Madville"
+      },
+      {
+        "id": 3,
+        "url": "https://www.youtube.com/embed/ma094F4TguY",
+        "text": "I Gatti Di Schrödinger - Hysteria (Muse cover) - live @ Madville"
+      }
+    ]
+  },
+  "contactSection": {
+    "id": 1,
+    "title": "CONTATTACI",
+    "info": {
+      "message": "Scrivi agli snap",
+      "email": "snap@snapout.it",
+      "eventManager": "Ruggero Ruggeri",
+      "phone": "+39 348 710 1958"
+    }
   }
 }
