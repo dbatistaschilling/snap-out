@@ -32,8 +32,8 @@ export const BandMembersSection = () =>
         <TeamMember
         img={"assets/img/pics/member4.png"}
         alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-        url={"/laca-ruggieri"}
-        name={"Laca Ruggieri"}
+        url={"/luca-ruggieri"}
+        name={"Luca Ruggieri"}
         role={"Batteria, violino, voce distorta"}
         />
         <TeamMember

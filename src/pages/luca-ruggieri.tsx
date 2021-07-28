@@ -5,10 +5,10 @@ import {
   PageTitle
 } from '../components'
 
-const LacaRuggieri = () =>
+const LucaRuggieri = () =>
 <>
   <PageTitle
-    title={"Laca Ruggieri"}
+    title={"Luca Ruggieri"}
     subtitle={"Batteria, violino,  voce distorta"}
     style={"02"}
     pageTitle={"04"}
@@ -30,7 +30,7 @@ const LacaRuggieri = () =>
   <PageContent>
     <div className="col-md-12 centered">
       <div className="custom-heading-01 triggerAnimation animated" data-animate="fadeInUp">
-          <h2>follow Laca sui social network</h2>
+          <h2>follow Luca sui social network</h2>
       </div>
     </div>
     <div className="col-md-12 centered">
@@ -44,4 +44,4 @@ const LacaRuggieri = () =>
   </PageContent>
 </>
 
-export default LacaRuggieri
+export default LucaRuggieri
