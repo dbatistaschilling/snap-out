@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import React, { useEffect, useState } from 'react'
 import {
   // CustomBackground,
   PageContent,
@@ -36,7 +36,7 @@ const MemberName = () => {
     )
   }
 
-  const { alt, id, image, name, role, url, memberPage } = member
+  const { name, role, memberPage } = member
 
   return (
     <>
