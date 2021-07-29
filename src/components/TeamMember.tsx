@@ -1,45 +1,35 @@
 import React from 'react'
 import Link from 'next/link'
+import { MemberType } from '../interfaces'
 
 type props = {
-  img: string
-  alt: string
-  url: string
-  name: string
-  role: string
+  member: MemberType
 }
 
 export const TeamMember = ({
-  img,
-  alt,
-  url,
-  name,
-  role
-}: props) =>
-  <div className="col-md-3 col-sm-6 col-xs-12 mb-0 centered">
-    <div className="team-member triggerAnimation animated" data-animate="fadeInUp" style={{ marginBottom: 20 }}>
-      {
-        process.env.NODE_ENV === "production" ? (
-          <Link href={`${url}`}>
-            <a>
-              <img src={img} alt={alt} />
-              <h2>
-                {name}
-              </h2>
-              <span>{role}</span>
-            </a>
-          </Link>
-        ) : (
-          <Link href={url}>
-            <a>
-              <img src={img} alt={alt} />
-              <h2>
-                {name}
-              </h2>
-              <span>{role}</span>
-            </a>
-          </Link>
-        )
-      }
+  member
+}: props) => {
+  const { alt, id, url, image, name, role } = member
+  return (
+    <div className="col-md-3 col-sm-6 col-xs-12 mb-0 centered">
+      <div className="team-member triggerAnimation animated" data-animate="fadeInUp" style={{ marginBottom: 20 }}>
+
+        <Link href={{
+              pathname: '/[member-name]',
+              query: {
+                ['member-name']: `${url}-${id}`
+              },
+            }} passHref>
+          <a>
+            <img src={image} alt={alt} />
+            <h2>
+              {name}
+            </h2>
+            <span>{role}</span>
+          </a>
+        </Link>
+
+      </div>
     </div>
-  </div>
+    )
+}

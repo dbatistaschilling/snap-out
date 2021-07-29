@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
+import Loader from "react-loader-spinner";
 import {
   PageContent
-} from '../components'
-import Loader from "react-loader-spinner";
+} from '../components';
 import { AppContext } from '../contexts/app-cotext';
 
 export const AboutSection = () => {

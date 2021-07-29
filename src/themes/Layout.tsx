@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
+import { useMediaPredicate } from 'react-media-hook'
 import { Footer, Header } from "../components"
 
 type LayoutProps = {
@@ -7,6 +8,17 @@ type LayoutProps = {
 }
 
 const Layout = ({ children, menuActive }: LayoutProps) => {
+
+    const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined)
+    const isMobileScreen = useMediaPredicate("(max-width: 991px)");
+
+    useEffect(() => {
+        setIsMobile(isMobileScreen)
+    }, []);
+
+    useEffect(() => {
+        setIsMobile(isMobileScreen)
+    }, [isMobileScreen]);
 
     return (
         <div>
@@ -19,7 +31,9 @@ const Layout = ({ children, menuActive }: LayoutProps) => {
 
             <Header menuActive={menuActive} />
 
-            {children}
+            <div className={`${isMobile ? 'body-margin-mobile' : ''}`}>
+                {children}
+            </div>
 
             <Footer
                 imgUrl={"/"}

@@ -111,17 +111,17 @@ export const Footer = ({
                     <li className="widget social-links clearfix">
                       <SocialLinks socials={[
                             // "http://soundcloud.com"
-                            { url: "#", icon: "fa fa-soundcloud" },
+                            // { url: "#", icon: "fa fa-soundcloud" },
                             // "https://www.facebook.com/pixel.industry.themes/"
-                            { url: "#", icon: "fa fa-facebook" },
+                            // { url: "#", icon: "fa fa-facebook" },
                             // "http://lastfm.com"
-                            { url: "#", icon: "fa fa-lastfm" },
+                            // { url: "#", icon: "fa fa-lastfm" },
                             // "http://youtube.com"
-                            { url: "#", icon: "fa fa-youtube" },
+                            { url: "https://www.youtube.com/watch?v=IXQJ3qwHL40", icon: "fa fa-youtube" },
                             // "https://twitter.com/pixel_industry"
-                            { url: "#", icon: "fa fa-twitter" },
+                            // { url: "#", icon: "fa fa-twitter" },
                             // "https://instagram.com"
-                            { url: "#", icon: "fa fa-instagram" },
+                            { url: "https://www.instagram.com/sn7pout/", icon: "fa fa-instagram" },
                         ]} />
                     </li>
                 </ul>

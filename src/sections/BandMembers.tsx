@@ -44,11 +44,7 @@ export const BandMembersSection = () => {
                     data.memberSection.members?.map(member => (
                         <TeamMember
                             key={member.id}
-                            img={member.image}
-                            alt={member.alt}
-                            url={member.url}
-                            name={member.name}
-                            role={member.role}
+                            member={member}
                         />
                     ))
                 }

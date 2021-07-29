@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { AppProvider } from '../contexts/app-cotext';
 import Layout from '../themes/Layout';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import '../components/componentStyles.css'
+import { MenuProvider } from '../contexts/menu-cotext';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 
@@ -24,9 +26,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   return (
     <AppProvider>
-      <Layout menuActive={menuActive} >
-        <Component {...pageProps} />
-      </Layout>
+      <MenuProvider>
+        <Layout menuActive={menuActive} >
+          <Component {...pageProps} />
+        </Layout>
+      </MenuProvider>
     </AppProvider>
   )
 }
