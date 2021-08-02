@@ -24,14 +24,30 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     };
   }
 
+  const _errorBoundary = (params: JSX.Element) => {
+    try {
+      params
+    } catch(err) {
+      router.replace('/')
+      router.reload()
+    }
+    return params
+  }
+
   return (
-    <AppProvider>
-      <MenuProvider>
-        <Layout menuActive={menuActive} >
-          <Component {...pageProps} />
-        </Layout>
-      </MenuProvider>
-    </AppProvider>
+    <>
+      {
+        _errorBoundary(
+          <AppProvider>
+            <MenuProvider>
+              <Layout menuActive={menuActive} >
+                <Component {...pageProps} />
+              </Layout>
+            </MenuProvider>
+          </AppProvider>
+        )
+      }
+    </>
   )
 }
 
