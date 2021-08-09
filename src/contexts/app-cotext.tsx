@@ -1,6 +1,5 @@
 import React, { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
-import { ContactSectionType, EventSectionType, MediaSectionType, MemberSectionType } from "../interfaces";
-import { AboutSectionType } from "../interfaces/AboutType";
+import { AboutParagraphType, ContactType, EventType, MediaType, MemberType, SectionType } from "../interfaces";
 import api from "../services/api";
 
 type AppProviderProps = {
@@ -13,26 +12,29 @@ interface AppContextData {
 }
 
 interface DataProps {
-  aboutSection: AboutSectionType;
-  contactSection: ContactSectionType;
-  eventSection: EventSectionType;
-  mediaSection: MediaSectionType;
-  memberSection: MemberSectionType;
+  sections: SectionType[];
+  aboutParagraphs: AboutParagraphType[];
+  contact: ContactType[];
+  events: EventType[];
+  media: MediaType[];
+  members: MemberType[];
 }
 
 export const AppContext = createContext({} as AppContextData);
 
-export const AppProvider = ({children}: AppProviderProps) => {
+const AppProvider = ({children}: AppProviderProps) => {
   const [notLoading, setNotLoading] = useState<boolean>(false)
   const [data, setData] = useState<DataProps>({
-    aboutSection: {},
-    contactSection: {},
-    eventSection: {},
-    mediaSection: {},
-    memberSection: {},
+    sections: [],
+    aboutParagraphs: [],
+    contact: [],
+    events: [],
+    media: [],
+    members: [],
   })
 
   useEffect(() => {
+
     const fetchData = async (param: string, setState: Dispatch<SetStateAction<DataProps>>) => {
       try {
         const response = await api.get(param)
@@ -76,3 +78,5 @@ export const AppProvider = ({children}: AppProviderProps) => {
     </AppContext.Provider>
   );
 };
+
+export default AppProvider;

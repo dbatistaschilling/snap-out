@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
   PageContent, TeamMember
 } from '../components'
@@ -8,8 +8,19 @@ import { AppContext } from '../contexts/app-cotext'
 export const BandMembersSection = () => {
 
     const { data } = useContext(AppContext)
+    const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
 
-    if (Object.keys(data.memberSection).length === 0) {
+    useEffect(() => {
+        if (data.sections.length > 0) {
+          data.sections.find(section => {
+            if (section.name === 'members') {
+              setSectionTitle(section.title)
+            }
+          })
+        }
+    }, [data.sections])
+
+    if (Object.keys(data.members).length === 0) {
         return <div id="members">
                     <br/>
                     <br/>
@@ -37,11 +48,11 @@ export const BandMembersSection = () => {
             <PageContent>
                 <div className="col-md-12 centered clearfix mb-0">
                     <div className="custom-heading-01 triggerAnimation animated" data-animate="fadeInUp">
-                        <h2>{data.memberSection.title}</h2>
+                        <h2>{sectionTitle ? sectionTitle : ''}</h2>
                     </div>
                 </div>
                 {
-                    data.memberSection.members?.map(member => (
+                    data.members?.map(member => (
                         <TeamMember
                             key={member.id}
                             member={member}

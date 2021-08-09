@@ -11,7 +11,7 @@ interface MenuContextData {
 
 export const MenuContext = createContext({} as MenuContextData);
 
-export const MenuProvider = ({children}: MenuProviderProps) => {
+const MenuProvider = ({children}: MenuProviderProps) => {
 
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenuOpen = () => {
@@ -28,3 +28,5 @@ export const MenuProvider = ({children}: MenuProviderProps) => {
     </MenuContext.Provider>
   );
 };
+
+export default MenuProvider;

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner'
 import {
   PageContent, PageTitle
@@ -9,8 +9,19 @@ import { MediaType } from '../interfaces'
 export const VideoGridSection = () => {
 
     const { data } = useContext(AppContext)
+    const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
 
-    if (Object.keys(data.mediaSection).length === 0) {
+    useEffect(() => {
+        if (data.sections.length > 0) {
+          data.sections.find(section => {
+            if (section.name === 'media') {
+              setSectionTitle(section.title)
+            }
+          })
+        }
+    }, [data.sections])
+
+    if (Object.keys(data.media).length === 0) {
         return <div id="media">
                     <br/>
                     <br/>
@@ -33,10 +44,10 @@ export const VideoGridSection = () => {
         <div id="media">
             <br/>
             <br/>
-            <PageTitle title={data.mediaSection?.title!} style={"01"} pageTitle={"01"} />
+            <PageTitle title={sectionTitle ? sectionTitle : ''} style={"01"} pageTitle={"01"} />
             <PageContent>
             {
-                data.mediaSection.videos?.map(({
+                data.media?.map(({
                     id,
                     url,
                     text

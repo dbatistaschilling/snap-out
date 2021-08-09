@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner'
 import {
   // PageBtn,
@@ -13,8 +13,19 @@ import { EventType } from '../interfaces'
 export const EventSection = () => {
 
     const { data } = useContext(AppContext)
+    const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
 
-    if (Object.keys(data.eventSection).length === 0) {
+    useEffect(() => {
+        if (data.sections.length > 0) {
+          data.sections.find(section => {
+            if (section.name === 'events') {
+              setSectionTitle(section.title)
+            }
+          })
+        }
+    }, [data.sections])
+
+    if (Object.keys(data.events).length === 0) {
         return <div id="events">
                     <br/>
                     <br/>
@@ -41,11 +52,11 @@ export const EventSection = () => {
             rowClasses={"mb-80"}
             // pageBtn={<PageBtn url={"#"} text={"View all dates"} />}
             >
-            <SectionTitle title={data.eventSection.title ? data.eventSection.title : ""} />
+            <SectionTitle title={sectionTitle ? sectionTitle : ''} />
             <div className="col-md-12">
                 <div className="pi-events events-style-02">
                     {
-                        data.eventSection.events?.map(({
+                        data.events?.map(({
                             id,
                             weekDay,
                             dayMonth,
@@ -54,11 +65,11 @@ export const EventSection = () => {
                         }: EventType) => (
                             <Event
                                 key={id}
-                                subtitle={weekDay}
-                                date={dayMonth}
-                                locationSubtitle={city}
+                                subtitle={weekDay!}
+                                date={dayMonth!}
+                                locationSubtitle={city!}
                                 locationUrl={"#"}
-                                locationText={local}
+                                locationText={local!}
                                 // tickets={[
                                 //     { name: "Fan club", isSoldOut: true, ticketUrl: "" },
                                 //     { name: "Vip tickets", isSoldOut: true, ticketUrl: "" },

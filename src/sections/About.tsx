@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Loader from "react-loader-spinner";
 import {
   PageContent
@@ -8,8 +8,19 @@ import { AppContext } from '../contexts/app-cotext';
 export const AboutSection = () => {
 
   const { data } = useContext(AppContext)
+  const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
 
-  if (Object.keys(data.aboutSection).length === 0) {
+  useEffect(() => {
+    if (data.sections.length > 0) {
+      data.sections.find(section => {
+        if (section.name === 'aboutParagraphs') {
+          setSectionTitle(section.title)
+        }
+      })
+    }
+  }, [data.sections])
+
+  if (Object.keys(data.aboutParagraphs).length === 0) {
       return <div id="aboutSnapOut">
                   <br/>
                   <br/>
@@ -39,10 +50,10 @@ export const AboutSection = () => {
         </div>
         <div className="col-md-8 centered">
           <div className="custom-heading-01 triggerAnimation animated" data-animate="fadeInUp">
-              <h2>{data.aboutSection.title}</h2>
+              <h2>{sectionTitle ? sectionTitle : ''}</h2>
           </div>
           {
-            data.aboutSection.paragraphs?.map(p => (
+            data.aboutParagraphs?.map(p => (
               <p key={p.id}>
                 {
                   p.text

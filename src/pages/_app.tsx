@@ -1,10 +1,17 @@
 import type { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
-import { AppProvider } from '../contexts/app-cotext';
-import Layout from '../themes/Layout';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import '../components/componentStyles.css'
-import { MenuProvider } from '../contexts/menu-cotext';
+import Layout from '../themes/Layout';
+import AppProvider from '../contexts/app-cotext';
+import MenuProvider from '../contexts/menu-cotext';
+
+// import loadable from '@loadable/component';
+
+// const AppProvider = loadable(() => import('../contexts/app-cotext'))
+// const MenuProvider = loadable(() => import('../contexts/menu-cotext'))
+// const Layout = loadable(() => import('../themes/Layout'))
+
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 
