@@ -22,17 +22,9 @@ export const MainNav = ({
                 <div className="navbar-header">
 
                     <div id="logo">
-                        {
-                            process.env.NODE_ENV === 'production' ? (
-                                <a href={`${logoUrl}`}>
-                                    <img src={logoImgPath} alt="gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."/>
-                                </a>
-                            ) : (
-                                <a href={logoUrl}>
-                                    <img src={logoImgPath} alt="gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."/>
-                                </a>
-                            )
-                        }
+                        <a href={`${logoUrl}`}>
+                            <img src={`${logoImgPath}?size=119x29`} alt="gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."/>
+                        </a>
                     </div>
 
                     {/* <button className="hamburger navbar-toggle hamburger--slider-r" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false"> */}

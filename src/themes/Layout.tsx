@@ -68,8 +68,8 @@ const Layout = ({ children, menuActive }: LayoutProps) => {
                 // newsLetterPopupMessage={"Sign up for our mailing list"}
                 // newsLetterMessage={"Sign up for our mailing list"}
                 // emailPlaceholderText={"Your email address.."}
-                copyrightUrl={"#"}
-                copyrightName={"Wymaze Srl"}
+                copyrightUrl={"/"}
+                copyrightName={"Davi Schilling / Full-Stack Developer, Rome"}
             />
         </div>
     )

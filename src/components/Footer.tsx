@@ -40,17 +40,9 @@ export const Footer = ({
 
                         <li className="widget widget_text">
                             <div className="textwidget">
-                                {
-                                    process.env.NODE_ENV === 'production' ? (
-                                        <a href={`${imgUrl}`}>
-                                            <img src={imgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
-                                        </a>
-                                    ) : (
-                                        <a href={imgUrl}>
-                                            <img src={imgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
-                                        </a>
-                                    )
-                                }
+                                <a href={imgUrl}>
+                                    <img src={`${imgPath}?size=119x29`} alt="gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti."/>
+                                </a>
                             </div>
                         </li>
                     </ul>

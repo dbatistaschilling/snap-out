@@ -1,7 +1,8 @@
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
+const withPWA = require('next-pwa');
 
-module.exports = withPlugins([
+const settings = withPlugins([
   [optimizedImages, {
     mozjpeg: {
       quality: 80,
@@ -14,8 +15,12 @@ module.exports = withPlugins([
     imagesPublicPath: '/snap-out/out/_next/static/images/',
   }],
   {
-    // basePath: '/snap-out',
-    // assetPrefix: '/snap-out/',
+    devIndicators: {
+      autoPrerender: false,
+    },
+    pwa: {
+      dest: 'public',
+    },
     env: {
       BACKEND_URL: '/snap-out',
     },
@@ -33,4 +38,8 @@ module.exports = withPlugins([
       }
     },
   },
-]);
+])
+
+
+
+module.exports = process.env.NODE_ENV === 'development' ? settings : withPWA(settings);

@@ -88,7 +88,7 @@ Tags: musician, music, band, music artist, music website template, music HTML te
                 6.22.12. WIDGET - CATEGORIES
                 6.22.13. WIDGET - PAGES
                 6.22.14. WIDGET - TAG CLOUD WIDGET
-                6.22.15. WIDGET - RECENT COMMENTS 
+                6.22.15. WIDGET - RECENT COMMENTS
                 6.22.16. WIDGET - RSS
                 6.22.17. WIDGET - SOCIAL LINKS
                 6.22.18. WIDGET - SHARRRE
@@ -99,11 +99,12 @@ Tags: musician, music, band, music artist, music website template, music HTML te
                 6.22.23. WIDGET - WOOCOMMERCE TOP RATED PRODUCTS, PRODUCT LIST (COMMON STYLING)
 */
 @font-face {
+    font-display: swap;
     font-family: "TrashHand";
     src: url("../fonts/TrashHand.TTF");
 }
 
-@import 
+@import
 "reset",
 "variables",
 "mixins",

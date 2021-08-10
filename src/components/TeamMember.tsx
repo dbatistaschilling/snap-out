@@ -21,7 +21,7 @@ export const TeamMember = ({
               },
             }} passHref>
           <a>
-            <img src={image} alt={alt} />
+            <img src={`${image}?size=262x262`} alt={alt} />
             <h2>
               {name}
             </h2>
