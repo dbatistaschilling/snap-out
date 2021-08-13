@@ -10,7 +10,7 @@ import {
 import { AppContext } from '../contexts/app-cotext'
 import { EventType } from '../interfaces'
 
-export const EventSection = () => {
+const EventSection = () => {
 
     const { data } = useContext(AppContext)
     const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
@@ -144,3 +144,5 @@ export const EventSection = () => {
         </div>
     )
 }
+
+export default EventSection

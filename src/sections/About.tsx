@@ -5,7 +5,7 @@ import {
 } from '../components';
 import { AppContext } from '../contexts/app-cotext';
 
-export const AboutSection = () => {
+const AboutSection = () => {
 
   const { data } = useContext(AppContext)
   const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
@@ -72,3 +72,5 @@ export const AboutSection = () => {
     </div>
   )
 }
+
+export default AboutSection

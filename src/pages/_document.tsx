@@ -24,6 +24,9 @@ export default class MyDocument extends Document {
           <script type="text/javascript" src="assets/masterslider/masterslider.min.js" defer></script>
           <script type="text/javascript" src="assets/owl-carousel/owl.carousel.min.js" defer></script>
           <script type="text/javascript" src="assets/js/volcanno.include.js" defer></script> */}
+          <script type="text/javascript" src="assets/masterslider/masterslider.min.js" defer></script>
+          <script type="text/javascript" src="assets/owl-carousel/owl.carousel.min.js" defer></script>
+          <script type="text/javascript" src="assets/js/volcanno.include.js" defer></script>
         </body>
       </Html>
     )

@@ -6,7 +6,11 @@ import {
 import { AppContext } from '../contexts/app-cotext'
 import { MediaType } from '../interfaces'
 
-export const VideoGridSection = () => {
+// import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import { ReactYouTubeLite } from 'react-youtube-lite';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+const VideoGridSection = () => {
 
     const { data } = useContext(AppContext)
     const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
@@ -57,15 +61,31 @@ export const VideoGridSection = () => {
                     }}>
                         <div className="video-item">
                             <div className="video-media">
-                                <iframe
-                                    src={url}
-                                    width="100%"
-                                    height="312"
-                                    frameBorder="0"
-                                    allowFullScreen={true}
-                                    // webkitallowfullscreen
-                                    // mozallowfullscreen
-                                ></iframe>
+                                <div className="yt-lite">
+                                    {/* <LiteYouTubeEmbed
+                                        id={id!.toString()}
+                                        title={text!}
+                                        iframeClass="video-frame"
+                                        playerClass="lty-playbtn"
+                                        wrapperClass="yt-lite"
+                                        poster="maxresdefault"
+                                    />
+                                    <iframe
+                                        className="video-frame"
+                                        src={url}
+                                        width="100%"
+                                        height="312"
+                                        frameBorder="0"
+                                        allowFullScreen={true}
+                                        webkitallowfullscreen
+                                        mozallowfullscreen
+                                    ></iframe> */}
+                                    <ReactYouTubeLite
+                                        url={url!}
+                                        title={text}
+                                    />
+                                </div>
+
                             </div>
                             <h2>{text}</h2>
                         </div>
@@ -168,3 +188,5 @@ export const VideoGridSection = () => {
         </div>
     )
 }
+
+export default VideoGridSection

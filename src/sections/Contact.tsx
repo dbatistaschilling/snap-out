@@ -4,7 +4,7 @@ import { CustomBackground, PageContent } from '../components'
 import { AppContext } from '../contexts/app-cotext'
 import { ContactType } from '../interfaces'
 
-export const ContactSection = () => {
+const ContactSection = () => {
 
   const { data } = useContext(AppContext)
   const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
@@ -65,3 +65,5 @@ export const ContactSection = () => {
     </div>
   )
 }
+
+export default ContactSection

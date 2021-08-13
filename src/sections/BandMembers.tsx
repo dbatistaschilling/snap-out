@@ -5,7 +5,7 @@ import {
 import Loader from "react-loader-spinner";
 import { AppContext } from '../contexts/app-cotext'
 
-export const BandMembersSection = () => {
+const BandMembersSection = () => {
 
     const { data } = useContext(AppContext)
     const [sectionTitle, setSectionTitle] = useState<string | undefined>(undefined)
@@ -59,42 +59,9 @@ export const BandMembersSection = () => {
                         />
                     ))
                 }
-                {/* <TeamMember
-                img={"assets/img/pics/member1.png"}
-                alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-                url={"/flavia-mazzetti"}
-                name={"Flavia Mazzetti"}
-                role={"Voce, Chitarra"}
-                />
-                <TeamMember
-                img={"assets/img/pics/member3.png"}
-                alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-                url={"/raul-ruggieri"}
-                name={"Raul Ruggieri"}
-                role={"Basso, tastiere, 2°voce"}
-                />
-                <TeamMember
-                img={"assets/img/pics/member4.png"}
-                alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-                url={"/laca-ruggieri"}
-                name={"Laca Ruggieri"}
-                role={"Batteria, violino, voce distorta"}
-                />
-                <TeamMember
-                img={"assets/img/pics/member5.png"}
-                alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-                url={"/luca-parente"}
-                name={"Luca Parente"}
-                role={"Chitarra, cori"}
-                />
-                <TeamMember
-                img={"assets/img/pics/member2.png"}
-                alt={"Musician HTML template for music industry - musicians, bands and music blogs"}
-                url={"/elisa-marsella"}
-                name={"Elisa Marsella"}
-                role={"Chitarra, tastiera, cori"}
-                /> */}
             </PageContent>
         </div>
     )
 }
+
+export default BandMembersSection

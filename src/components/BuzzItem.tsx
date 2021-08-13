@@ -1,4 +1,5 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 type props = {
   url: string
@@ -12,7 +13,7 @@ type props = {
   eventName: string
 }
 
-export const BuzzItem = ({ 
+export const BuzzItem = ({
   url,
   img,
   authorUrl,
@@ -28,7 +29,13 @@ export const BuzzItem = ({
         <div className="post-container clearfix">
             <div className="post-media">
                 <a href={url}>
-                    <img src={img} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
+                    <LazyLoadImage
+                      alt={"Post media"}
+                      width={360}
+                      height={252}
+                      src={img}
+                    />
+                    {/* <img src={img} alt="Musician HTML template for music industry - musicians, bands and music blogs"/> */}
                 </a>
             </div>
 

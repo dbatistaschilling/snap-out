@@ -1,4 +1,5 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 type product = {
   url: string
@@ -26,13 +27,19 @@ export const WooCommerce = ({ products }: props) =>
             }: product) => (
               <li key={imgPath} className="product">
                   <a href={url} className="woocommerce-LoopProduct-link">
-                      <img src={imgPath} alt="Placeholder" height="300" />
-                      <h3>{name}</h3>
+                    <LazyLoadImage
+                      alt={"Placeholder"}
+                      width={262}
+                      height={262}
+                      src={imgPath}
+                    />
+                    {/* <img src={imgPath} alt="Placeholder" height="300" /> */}
+                    <h3>{name}</h3>
 
-                      <span className="price">
-                          <span className="amount">
-                              <span>{currency}</span>{price}</span>
-                      </span>
+                    <span className="price">
+                        <span className="amount">
+                            <span>{currency}</span>{price}</span>
+                    </span>
                   </a>
                   <a href={url} className="button">Add to cart</a>
               </li>

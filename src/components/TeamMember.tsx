@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { MemberType } from '../interfaces'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 type props = {
   member: MemberType
@@ -21,7 +22,13 @@ export const TeamMember = ({
               },
             }} passHref>
           <a>
-            <img src={`${image}?size=262x262`} alt={alt} />
+            <LazyLoadImage
+              alt={alt}
+              width={262}
+              height={262}
+              src={image}
+            />
+            {/* <img src={`${image}?size=262x262`} alt={alt} /> */}
             <h2>
               {name}
             </h2>

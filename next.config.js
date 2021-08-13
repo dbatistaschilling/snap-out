@@ -1,6 +1,8 @@
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
 const withPWA = require('next-pwa');
+// const withCss = require("@zeit/next-css");
+// const withPurgeCss = require("next-purgecss");
 
 const settings = withPlugins([
   [optimizedImages, {
@@ -40,6 +42,19 @@ const settings = withPlugins([
   },
 ])
 
+// const config = withPurgeCss({
+//   purgeCssPaths: [
+//     'pages/**/*',
+//     'components/**/*'
+//   ],
+//   purgeCss: {
+//     whitelist: () => ['player'],
+//     whitelistPatterns: () => [/Toastify/, /.*nprogress.*/],
+//     rejected: true
+//   },
+//   purgeCssEnabled: ({ dev, isServer }) => true, // Enable PurgeCSS for all env
+// });
 
+// module.exports = config;
 
 module.exports = process.env.NODE_ENV === 'development' ? settings : withPWA(settings);

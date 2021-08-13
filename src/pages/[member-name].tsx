@@ -18,9 +18,11 @@ const MemberName = () => {
 
   const fetchMember = async () => {
     try {
-      let id = window.localStorage.getItem('memberId')
+      let id: string | null = router
+        .query['member-name']?.toString().split('-')[2]
       if (!id) {
-        id = router.query['member-name']?.toString().split('-')[2]
+        id = window.localStorage.getItem('memberId')
+      } else {
         window.localStorage.setItem('memberId', id.toString())
       }
       const { data } = await api.get(`members?id=${id}`)

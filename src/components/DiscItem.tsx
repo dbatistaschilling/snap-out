@@ -1,4 +1,5 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 type portfolioMeta = {
     url: string
@@ -22,14 +23,20 @@ export const DiscItem = ({
     title,
     portfoliosMeta,
     audioId,
-    audioUrl 
+    audioUrl
 }: props) =>
   <div className="owl-item">
     <div className="latest-portfolio-item clearfix">
         <div className="portfolio-item-container clearfix">
             <div className="portfolio-img">
                 <a href={albumImgUrl}>
-                    <img src={albumImgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/>
+                    <LazyLoadImage
+                      alt={"Portfolio image"}
+                      width={262}
+                      height={262}
+                      src={albumImgPath}
+                    />
+                    {/* <img src={albumImgPath} alt="Musician HTML template for music industry - musicians, bands and music blogs"/> */}
                 </a>
             </div>
             <h3><a href={titleUrl}>{title}</a></h3>

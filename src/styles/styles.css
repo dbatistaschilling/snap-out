@@ -27,5 +27,33 @@
 }
 
 .body-margin-mobile {
-  margin-top: 15vh;
+  padding-top: 5vh;
+}
+
+.fade-in-fader {
+  transition: opacity 1s ease;
+}
+
+.fade-out-fader {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.fader-text {
+  color: #e21f2f;
+  margin-bottom: 0;
+  font-family: "TrashHand", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 120px;
+  line-height: 130px;
+  text-transform: uppercase;
+}
+
+.fader-text-02 {
+  color: #fff;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 80px;
+  display: block;
 }

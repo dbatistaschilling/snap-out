@@ -11,7 +11,7 @@ type props = {
 export const Header = ({ menuActive }: props) => {
 
     const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined)
-    const isMobileScreen = useMediaPredicate("(max-width: 991px)");
+    const isMobileScreen = useMediaPredicate("(max-width: 767px)");
 
     useEffect(() => {
         setIsMobile(isMobileScreen)

@@ -1,4 +1,5 @@
 import React from 'react'
+import PreloadImage from 'react-preload-image'
 
 export const HeadComponent = () =>
 <>
@@ -21,9 +22,23 @@ export const HeadComponent = () =>
   <link rel="preconnect" href="http://http://localhost:3000" />
   <link rel="preconnect" href="https://snapout.it" />
 
-  <link rel="preload" as="image" href="assets/img/slider/musician-music-band-slide-01-small.png?size=345x477" />
+  <PreloadImage
+    src="assets/img/svg/logo-snap-out.svg?size=119x29"
+    lazy
+  />
 
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600&amp;subset=latin,latin-ext&display=swap" />
+  <PreloadImage
+    src="assets/img/slider/musician-music-band-slide-01-small.png?size=345x477"
+    lazy
+  />
+
+  <link
+    as="style"
+    rel="stylesheet preload prefetch"
+    href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600&amp;subset=latin,latin-ext&display=swap"
+    type="text/css"
+    crossOrigin="anonymous"
+  />
 
   <style dangerouslySetInnerHTML={{
   __html: `</style>
@@ -56,12 +71,8 @@ export const HeadComponent = () =>
 
   <script type="text/javascript" src="assets/js/jquery-core.js" defer></script>
   <script type="text/javascript" src="assets/js/jquery-scripts.js" defer></script>
-  <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js" defer></script>
   <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js" defer></script>
-  <script type="text/javascript" src="assets/masterslider/masterslider.min.js" defer></script>
-  <script type="text/javascript" src="assets/owl-carousel/owl.carousel.min.js" defer></script>
-  <script type="text/javascript" src="assets/js/volcanno.include.js" defer></script>
-
+  <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js" defer></script>
 </>
 
 export default HeadComponent;

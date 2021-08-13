@@ -202,7 +202,11 @@ jQuery(window).on("load resize", function () {
     })();
 
     // Init scripts on page load
-    VolcannoInclude.init();
+    if (VolcannoInclude) {
+        VolcannoInclude.init();
+    } else {
+        setTimeout(VolcannoInclude.init(), 3000)
+    }
 
 });
 
